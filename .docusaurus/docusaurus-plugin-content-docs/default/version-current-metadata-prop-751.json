@@ -1,0 +1,154 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "Introduction",
+        "href": "/docs/intro",
+        "docId": "intro"
+      },
+      {
+        "type": "category",
+        "label": "How-to Guides",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Create a Page",
+            "href": "/docs/How-to Guides/create-a-page",
+            "docId": "How-to Guides/create-a-page"
+          },
+          {
+            "type": "link",
+            "label": "Create a Document",
+            "href": "/docs/How-to Guides/create-a-document",
+            "docId": "How-to Guides/create-a-document"
+          },
+          {
+            "type": "link",
+            "label": "Create a Blog Post",
+            "href": "/docs/How-to Guides/create-a-blog-post",
+            "docId": "How-to Guides/create-a-blog-post"
+          },
+          {
+            "type": "link",
+            "label": "Markdown Features",
+            "href": "/docs/How-to Guides/markdown-features",
+            "docId": "How-to Guides/markdown-features"
+          },
+          {
+            "type": "link",
+            "label": "Deploy your site",
+            "href": "/docs/How-to Guides/deploy-your-site",
+            "docId": "How-to Guides/deploy-your-site"
+          },
+          {
+            "type": "link",
+            "label": "Congratulations!",
+            "href": "/docs/How-to Guides/congratulations",
+            "docId": "How-to Guides/congratulations"
+          }
+        ],
+        "href": "/docs/category/how-to-guides"
+      },
+      {
+        "type": "category",
+        "label": "Reference",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Manage Docs Versions",
+            "href": "/docs/Reference/manage-docs-versions",
+            "docId": "Reference/manage-docs-versions"
+          },
+          {
+            "type": "link",
+            "label": "Translate your site",
+            "href": "/docs/Reference/translate-your-site",
+            "docId": "Reference/translate-your-site"
+          }
+        ],
+        "href": "/docs/category/reference"
+      },
+      {
+        "type": "link",
+        "label": "Hello from Docusaurus",
+        "href": "/docs/greeting",
+        "docId": "greeting"
+      }
+    ]
+  },
+  "docs": {
+    "greeting": {
+      "id": "greeting",
+      "title": "Hello from Docusaurus",
+      "description": "Create a doc page with rich content.",
+      "sidebar": "tutorialSidebar"
+    },
+    "How-to Guides/congratulations": {
+      "id": "How-to Guides/congratulations",
+      "title": "Congratulations!",
+      "description": "You have just learned the basics of Docusaurus and made some changes to the initial template.",
+      "sidebar": "tutorialSidebar"
+    },
+    "How-to Guides/create-a-blog-post": {
+      "id": "How-to Guides/create-a-blog-post",
+      "title": "Create a Blog Post",
+      "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
+      "sidebar": "tutorialSidebar"
+    },
+    "How-to Guides/create-a-document": {
+      "id": "How-to Guides/create-a-document",
+      "title": "Create a Document",
+      "description": "Documents are groups of pages connected through:",
+      "sidebar": "tutorialSidebar"
+    },
+    "How-to Guides/create-a-page": {
+      "id": "How-to Guides/create-a-page",
+      "title": "Create a Page",
+      "description": "Add Markdown or React files to src/pages to create a standalone page:",
+      "sidebar": "tutorialSidebar"
+    },
+    "How-to Guides/deploy-your-site": {
+      "id": "How-to Guides/deploy-your-site",
+      "title": "Deploy your site",
+      "description": "Docusaurus is a static-site-generator (also called Jamstack).",
+      "sidebar": "tutorialSidebar"
+    },
+    "How-to Guides/markdown-features": {
+      "id": "How-to Guides/markdown-features",
+      "title": "Markdown Features",
+      "description": "Docusaurus supports Markdown and a few additional features.",
+      "sidebar": "tutorialSidebar"
+    },
+    "intro": {
+      "id": "intro",
+      "title": "Introduction",
+      "description": "tictactrip develops the platform for booking and distributing eco-responsible long-distance trips.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Reference/manage-docs-versions": {
+      "id": "Reference/manage-docs-versions",
+      "title": "Manage Docs Versions",
+      "description": "Docusaurus can manage multiple versions of your docs.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Reference/translate-your-site": {
+      "id": "Reference/translate-your-site",
+      "title": "Translate your site",
+      "description": "Let's translate docs/intro.md to French.",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

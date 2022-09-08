@@ -1,0 +1,16 @@
+{
+  "title": "How-to Guides",
+  "description": "5 minutes to learn the most important Docusaurus concepts.",
+  "slug": "/category/how-to-guides",
+  "permalink": "/docs/category/how-to-guides",
+  "navigation": {
+    "previous": {
+      "title": "Introduction",
+      "permalink": "/docs/intro"
+    },
+    "next": {
+      "title": "Create a Page",
+      "permalink": "/docs/How-to Guides/create-a-page"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Reference",
+  "slug": "/category/reference",
+  "permalink": "/docs/category/reference",
+  "navigation": {
+    "previous": {
+      "title": "Congratulations!",
+      "permalink": "/docs/How-to Guides/congratulations"
+    },
+    "next": {
+      "title": "Manage Docs Versions",
+      "permalink": "/docs/Reference/manage-docs-versions"
+    }
+  }
+}

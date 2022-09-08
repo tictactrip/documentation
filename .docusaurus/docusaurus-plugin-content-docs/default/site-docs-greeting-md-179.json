@@ -1,0 +1,22 @@
+{
+  "unversionedId": "greeting",
+  "id": "greeting",
+  "title": "Hello from Docusaurus",
+  "description": "Create a doc page with rich content.",
+  "source": "@site/docs/greeting.md",
+  "sourceDirName": ".",
+  "slug": "/greeting",
+  "permalink": "/docs/greeting",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/greeting.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Create a doc page with rich content."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/docs/Reference/translate-your-site"
+  }
+}
