@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Reference/segment",
+  "id": "Reference/segment",
+  "title": "Segment",
+  "description": "Definition",
+  "source": "@site/docs/Reference/segment.md",
+  "sourceDirName": "Reference",
+  "slug": "/Reference/segment",
+  "permalink": "/docs/Reference/segment",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Reference",
+    "permalink": "/docs/category/reference"
+  },
+  "next": {
+    "title": "Trip",
+    "permalink": "/docs/Reference/trip"
+  }
+}

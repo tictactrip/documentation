@@ -8,7 +8,6 @@
   "slug": "/How-to Guides/markdown-features",
   "permalink": "/docs/How-to Guides/markdown-features",
   "draft": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/markdown-features.mdx",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -17,11 +16,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Create a Blog Post",
-    "permalink": "/docs/How-to Guides/create-a-blog-post"
+    "title": "Get all stop clusters",
+    "permalink": "/docs/How-to Guides/get-all-stop-groups"
   },
   "next": {
-    "title": "Deploy your site",
-    "permalink": "/docs/How-to Guides/deploy-your-site"
+    "title": "Reference",
+    "permalink": "/docs/category/reference"
   }
 }

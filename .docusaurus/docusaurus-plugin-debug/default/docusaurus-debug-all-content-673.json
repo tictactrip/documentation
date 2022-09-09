@@ -11,8 +11,6 @@
           "className": "docs-version-current",
           "path": "/docs",
           "tagsPath": "/docs/tags",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
-          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
           "sidebarFilePath": "/Users/swann/tictactrip/documentation/sidebars.js",
@@ -20,119 +18,15 @@
           "contentPathLocalized": "/Users/swann/tictactrip/documentation/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "greeting",
-              "id": "greeting",
-              "title": "Hello from Docusaurus",
-              "description": "Create a doc page with rich content.",
-              "source": "@site/docs/greeting.md",
-              "sourceDirName": ".",
-              "slug": "/greeting",
-              "permalink": "/docs/greeting",
-              "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/greeting.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "description": "Create a doc page with rich content."
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Translate your site",
-                "permalink": "/docs/Reference/translate-your-site"
-              }
-            },
-            {
-              "unversionedId": "How-to Guides/congratulations",
-              "id": "How-to Guides/congratulations",
-              "title": "Congratulations!",
-              "description": "You have just learned the basics of Docusaurus and made some changes to the initial template.",
-              "source": "@site/docs/How-to Guides/congratulations.md",
+              "unversionedId": "How-to Guides/get-all-stop-clusters",
+              "id": "How-to Guides/get-all-stop-clusters",
+              "title": "Get all stop clusters",
+              "description": "Response body example",
+              "source": "@site/docs/How-to Guides/get-all-stop-clusters.md",
               "sourceDirName": "How-to Guides",
-              "slug": "/How-to Guides/congratulations",
-              "permalink": "/docs/How-to Guides/congratulations",
+              "slug": "/How-to Guides/get-all-stop-clusters",
+              "permalink": "/docs/How-to Guides/get-all-stop-clusters",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/congratulations.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 6,
-              "frontMatter": {
-                "sidebar_position": 6
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Deploy your site",
-                "permalink": "/docs/How-to Guides/deploy-your-site"
-              },
-              "next": {
-                "title": "Reference",
-                "permalink": "/docs/category/reference"
-              }
-            },
-            {
-              "unversionedId": "How-to Guides/create-a-blog-post",
-              "id": "How-to Guides/create-a-blog-post",
-              "title": "Create a Blog Post",
-              "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
-              "source": "@site/docs/How-to Guides/create-a-blog-post.md",
-              "sourceDirName": "How-to Guides",
-              "slug": "/How-to Guides/create-a-blog-post",
-              "permalink": "/docs/How-to Guides/create-a-blog-post",
-              "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/create-a-blog-post.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "sidebar_position": 3
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Create a Document",
-                "permalink": "/docs/How-to Guides/create-a-document"
-              },
-              "next": {
-                "title": "Markdown Features",
-                "permalink": "/docs/How-to Guides/markdown-features"
-              }
-            },
-            {
-              "unversionedId": "How-to Guides/create-a-document",
-              "id": "How-to Guides/create-a-document",
-              "title": "Create a Document",
-              "description": "Documents are groups of pages connected through:",
-              "source": "@site/docs/How-to Guides/create-a-document.md",
-              "sourceDirName": "How-to Guides",
-              "slug": "/How-to Guides/create-a-document",
-              "permalink": "/docs/How-to Guides/create-a-document",
-              "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/create-a-document.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Create a Page",
-                "permalink": "/docs/How-to Guides/create-a-page"
-              },
-              "next": {
-                "title": "Create a Blog Post",
-                "permalink": "/docs/How-to Guides/create-a-blog-post"
-              }
-            },
-            {
-              "unversionedId": "How-to Guides/create-a-page",
-              "id": "How-to Guides/create-a-page",
-              "title": "Create a Page",
-              "description": "Add Markdown or React files to src/pages to create a standalone page:",
-              "source": "@site/docs/How-to Guides/create-a-page.md",
-              "sourceDirName": "How-to Guides",
-              "slug": "/How-to Guides/create-a-page",
-              "permalink": "/docs/How-to Guides/create-a-page",
-              "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/create-a-page.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -145,48 +39,94 @@
                 "permalink": "/docs/category/how-to-guides"
               },
               "next": {
-                "title": "Create a Document",
-                "permalink": "/docs/How-to Guides/create-a-document"
+                "title": "Get all stop groups",
+                "permalink": "/docs/How-to Guides/get-all-stop-groups"
               }
             },
             {
-              "unversionedId": "How-to Guides/deploy-your-site",
-              "id": "How-to Guides/deploy-your-site",
-              "title": "Deploy your site",
-              "description": "Docusaurus is a static-site-generator (also called Jamstack).",
-              "source": "@site/docs/How-to Guides/deploy-your-site.md",
+              "unversionedId": "How-to Guides/get-all-stop-groups",
+              "id": "How-to Guides/get-all-stop-groups",
+              "title": "Get all stop groups",
+              "description": "Response body example",
+              "source": "@site/docs/How-to Guides/get-all-stop-groups.md",
               "sourceDirName": "How-to Guides",
-              "slug": "/How-to Guides/deploy-your-site",
-              "permalink": "/docs/How-to Guides/deploy-your-site",
+              "slug": "/How-to Guides/get-all-stop-groups",
+              "permalink": "/docs/How-to Guides/get-all-stop-groups",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/deploy-your-site.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 5,
+              "sidebarPosition": 2,
               "frontMatter": {
-                "sidebar_position": 5
+                "sidebar_position": 2
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Markdown Features",
-                "permalink": "/docs/How-to Guides/markdown-features"
+                "title": "Get all stop clusters",
+                "permalink": "/docs/How-to Guides/get-all-stop-clusters"
               },
               "next": {
-                "title": "Congratulations!",
-                "permalink": "/docs/How-to Guides/congratulations"
+                "title": "Reference",
+                "permalink": "/docs/category/reference"
               }
             },
             {
-              "unversionedId": "How-to Guides/markdown-features",
-              "id": "How-to Guides/markdown-features",
-              "title": "Markdown Features",
-              "description": "Docusaurus supports Markdown and a few additional features.",
-              "source": "@site/docs/How-to Guides/markdown-features.mdx",
-              "sourceDirName": "How-to Guides",
-              "slug": "/How-to Guides/markdown-features",
-              "permalink": "/docs/How-to Guides/markdown-features",
+              "unversionedId": "intro",
+              "id": "intro",
+              "title": "Introduction",
+              "description": "Tictactrip develops the platform for booking and distributing eco-responsible long-distance trips.",
+              "source": "@site/docs/intro.md",
+              "sourceDirName": ".",
+              "slug": "/intro",
+              "permalink": "/docs/intro",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/markdown-features.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "How-to Guides",
+                "permalink": "/docs/category/how-to-guides"
+              }
+            },
+            {
+              "unversionedId": "Reference/segment",
+              "id": "Reference/segment",
+              "title": "Segment",
+              "description": "Definition",
+              "source": "@site/docs/Reference/segment.md",
+              "sourceDirName": "Reference",
+              "slug": "/Reference/segment",
+              "permalink": "/docs/Reference/segment",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Reference",
+                "permalink": "/docs/category/reference"
+              },
+              "next": {
+                "title": "Trip",
+                "permalink": "/docs/Reference/trip"
+              }
+            },
+            {
+              "unversionedId": "Reference/stop-cluster",
+              "id": "Reference/stop-cluster",
+              "title": "Stop Cluster",
+              "description": "Definition",
+              "source": "@site/docs/Reference/stop-cluster.md",
+              "sourceDirName": "Reference",
+              "slug": "/Reference/stop-cluster",
+              "permalink": "/docs/Reference/stop-cluster",
+              "draft": false,
               "tags": [],
               "version": "current",
               "sidebarPosition": 4,
@@ -195,75 +135,46 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Create a Blog Post",
-                "permalink": "/docs/How-to Guides/create-a-blog-post"
-              },
-              "next": {
-                "title": "Deploy your site",
-                "permalink": "/docs/How-to Guides/deploy-your-site"
+                "title": "Stop Group",
+                "permalink": "/docs/Reference/stop-group"
               }
             },
             {
-              "unversionedId": "intro",
-              "id": "intro",
-              "title": "Introduction",
-              "description": "tictactrip develops the platform for booking and distributing eco-responsible long-distance trips.",
-              "source": "@site/docs/intro.md",
-              "sourceDirName": ".",
-              "slug": "/intro",
-              "permalink": "/docs/intro",
-              "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/intro.md",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "next": {
-                "title": "How-to Guides",
-                "permalink": "/docs/category/how-to-guides"
-              }
-            },
-            {
-              "unversionedId": "Reference/manage-docs-versions",
-              "id": "Reference/manage-docs-versions",
-              "title": "Manage Docs Versions",
-              "description": "Docusaurus can manage multiple versions of your docs.",
-              "source": "@site/docs/Reference/manage-docs-versions.md",
+              "unversionedId": "Reference/stop-group",
+              "id": "Reference/stop-group",
+              "title": "Stop Group",
+              "description": "Definition",
+              "source": "@site/docs/Reference/stop-group.md",
               "sourceDirName": "Reference",
-              "slug": "/Reference/manage-docs-versions",
-              "permalink": "/docs/Reference/manage-docs-versions",
+              "slug": "/Reference/stop-group",
+              "permalink": "/docs/Reference/stop-group",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Reference/manage-docs-versions.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 1,
+              "sidebarPosition": 3,
               "frontMatter": {
-                "sidebar_position": 1
+                "sidebar_position": 3
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Reference",
-                "permalink": "/docs/category/reference"
+                "title": "Trip",
+                "permalink": "/docs/Reference/trip"
               },
               "next": {
-                "title": "Translate your site",
-                "permalink": "/docs/Reference/translate-your-site"
+                "title": "Stop Cluster",
+                "permalink": "/docs/Reference/stop-cluster"
               }
             },
             {
-              "unversionedId": "Reference/translate-your-site",
-              "id": "Reference/translate-your-site",
-              "title": "Translate your site",
-              "description": "Let's translate docs/intro.md to French.",
-              "source": "@site/docs/Reference/translate-your-site.md",
+              "unversionedId": "Reference/trip",
+              "id": "Reference/trip",
+              "title": "Trip",
+              "description": "Definition",
+              "source": "@site/docs/Reference/trip.md",
               "sourceDirName": "Reference",
-              "slug": "/Reference/translate-your-site",
-              "permalink": "/docs/Reference/translate-your-site",
+              "slug": "/Reference/trip",
+              "permalink": "/docs/Reference/trip",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Reference/translate-your-site.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -272,12 +183,12 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Manage Docs Versions",
-                "permalink": "/docs/Reference/manage-docs-versions"
+                "title": "Segment",
+                "permalink": "/docs/Reference/segment"
               },
               "next": {
-                "title": "Hello from Docusaurus",
-                "permalink": "/docs/greeting"
+                "title": "Stop Group",
+                "permalink": "/docs/Reference/stop-group"
               }
             }
           ],
@@ -296,27 +207,11 @@
                 "items": [
                   {
                     "type": "doc",
-                    "id": "How-to Guides/create-a-page"
+                    "id": "How-to Guides/get-all-stop-clusters"
                   },
                   {
                     "type": "doc",
-                    "id": "How-to Guides/create-a-document"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "How-to Guides/create-a-blog-post"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "How-to Guides/markdown-features"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "How-to Guides/deploy-your-site"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "How-to Guides/congratulations"
+                    "id": "How-to Guides/get-all-stop-groups"
                   }
                 ],
                 "link": {
@@ -334,11 +229,19 @@
                 "items": [
                   {
                     "type": "doc",
-                    "id": "Reference/manage-docs-versions"
+                    "id": "Reference/segment"
                   },
                   {
                     "type": "doc",
-                    "id": "Reference/translate-your-site"
+                    "id": "Reference/trip"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Reference/stop-group"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Reference/stop-cluster"
                   }
                 ],
                 "link": {
@@ -346,10 +249,6 @@
                   "slug": "/category/reference",
                   "permalink": "/docs/category/reference"
                 }
-              },
-              {
-                "type": "doc",
-                "id": "greeting"
               }
             ]
           }
@@ -1497,10 +1396,12 @@
                   "$ref": "#/components/schemas/ICartCustomer"
                 },
                 "partnerId": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "partnerExternalId": {
                   "type": "string",
+                  "nullable": true,
                   "description": "Matches an id provided from a partner. It is used to keep track of the partner's orders and enables an order match between their system and our own"
                 }
               },
@@ -3790,7 +3691,8 @@
                   "format": "double"
                 },
                 "partnerId": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -5509,7 +5411,7 @@
         },
         "info": {
           "title": "@tictactrip/api",
-          "version": "2.529.0",
+          "version": "2.533.0",
           "description": "Tictactrip's API service",
           "license": {
             "name": "UNLICENSED"
@@ -5522,9 +5424,85 @@
         },
         "openapi": "3.0.0",
         "paths": {
+          "/orderETickets/{orderId}/download/{filename}": {
+            "get": {
+              "operationId": "DownloadTicket",
+              "responses": {
+                "200": {
+                  "description": "OK",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "string",
+                        "format": "byte"
+                      }
+                    }
+                  }
+                },
+                "404": {
+                  "description": "If no order is found",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "orderEtickets:client:orderNotFound",
+                            "errorMessage": "Order was not found"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Download an order Eticket and gives the name provided to the file.",
+              "security": [],
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "orderId",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  },
+                  "example": "8bc8557793fe4447"
+                },
+                {
+                  "in": "path",
+                  "name": "filename",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  },
+                  "example": "myTicket"
+                }
+              ]
+            }
+          },
           "/v2/stopGroups": {
             "get": {
-              "operationId": "getAllStopGroups",
+              "operationId": "GetAllStopGroups",
               "responses": {
                 "200": {
                   "description": "OK",
@@ -5558,12 +5536,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns the list of all StopGroups",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns the list of all StopGroups.",
               "security": [
                 {
                   "authentication": [
@@ -5578,7 +5571,7 @@
           },
           "/v2/stopGroups/{stopGroupGpuid}": {
             "get": {
-              "operationId": "getStopGroup",
+              "operationId": "GetStopGroup",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -5625,12 +5618,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns a StopGroup details",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns a StopGroup details.",
               "security": [
                 {
                   "authentication": [
@@ -5655,7 +5663,7 @@
           },
           "/v2/stopClusters": {
             "get": {
-              "operationId": "getAllStopClusters",
+              "operationId": "GetAllStopClusters",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -5683,12 +5691,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns the list of all StopClusters",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns the list of all StopClusters.",
               "security": [
                 {
                   "authentication": [
@@ -5703,7 +5726,7 @@
           },
           "/v2/stopClusters/{stopClusterGpuid}": {
             "get": {
-              "operationId": "getStopCluster",
+              "operationId": "GetStopCluster",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -5744,12 +5767,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns a StopCluster details",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns a StopCluster details.",
               "security": [
                 {
                   "authentication": [
@@ -5772,53 +5810,9 @@
               ]
             }
           },
-          "/v2/providers": {
-            "get": {
-              "operationId": "getProviders",
-              "responses": {
-                "200": {
-                  "description": "Ok",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "items": {
-                          "$ref": "#/components/schemas/IApiProvider"
-                        },
-                        "type": "array"
-                      },
-                      "examples": {
-                        "Example 1": {
-                          "value": [
-                            {
-                              "name": "Altibus",
-                              "transportType": "bus"
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Returns the list of all providers",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "bookPartner",
-                    "searchPartner",
-                    "admin"
-                  ]
-                }
-              ],
-              "parameters": []
-            }
-          },
           "/v2/results": {
             "post": {
-              "operationId": "getResults",
+              "operationId": "GetResults",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -5961,12 +5955,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
               "description": "Fetch results. Ignore search request that are further than 1800KM.",
-              "tags": [
-                "PartnersApi"
-              ],
               "security": [
                 {
                   "authentication": [
@@ -6000,105 +6009,110 @@
               }
             }
           },
-          "/v2/carts/{cartId}": {
+          "/booking/v3/carts/{cartId}": {
             "get": {
-              "operationId": "getCart",
+              "operationId": "GetCart",
               "responses": {
                 "200": {
                   "description": "OK",
                   "content": {
                     "application/json": {
                       "schema": {
-                        "$ref": "#/components/schemas/TApiCart"
+                        "properties": {
+                          "cart": {
+                            "$ref": "#/components/schemas/ISerializedCart"
+                          }
+                        },
+                        "required": [
+                          "cart"
+                        ],
+                        "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "id": "ca2fe467861c405a",
                             "cart": {
-                              "outboundTrip": {
-                                "id": "6162",
-                                "uuid": "00000000-0000-0000-0000-000000000000",
-                                "origin": {
-                                  "city": "Paris",
-                                  "country": "France",
-                                  "station": "Marne-la-Vallée Chessy Disneyland Paris"
-                                },
-                                "destination": {
-                                  "city": "Lille",
-                                  "country": "France",
-                                  "station": "Lille Europe"
-                                },
-                                "originOffset": "+0200",
-                                "destinationOffset": "+0200",
-                                "priceCents": 2750,
-                                "feeCents": 0,
-                                "paidPrice": 2750,
-                                "departureUTC": 1600887060,
-                                "arrivalUTC": 1600891080,
-                                "durationMinutes": 67,
-                                "companies": [
-                                  "TGV"
-                                ],
-                                "co2g": 1000,
-                                "segments": [
-                                  {
-                                    "id": "8800",
-                                    "company": "TGV",
-                                    "mean": "train",
-                                    "origin": {
-                                      "city": "Paris",
-                                      "country": "France",
-                                      "station": "Marne-la-Vallée Chessy Disneyland Paris",
-                                      "lat": 48.8566,
-                                      "long": 2.3515
-                                    },
-                                    "destination": {
-                                      "city": "Lille",
-                                      "country": "France",
-                                      "station": "Lille Europe",
-                                      "lat": 50.638756,
-                                      "long": 3.076675
-                                    },
-                                    "isBookable": true,
-                                    "priceCents": 2750,
-                                    "feeCents": 0,
-                                    "includedProviderFeeCents": 0,
-                                    "departureUTC": 1600887060,
-                                    "arrivalUTC": 1600891080,
-                                    "originOffset": "+0200",
-                                    "destinationOffset": "+0200",
-                                    "durationMinutes": 67,
-                                    "redirectionLink": "/redirect?company=10&origin=FRMLV&destination=FRLLE&date=23/09/2020&time=18&passengers=[{\"profile\":\"ADULT\",\"card\":\"\"}]&env=production"
-                                  }
-                                ],
-                                "mean": "TRAIN"
+                              "id": "6771146ca0b7432b",
+                              "partnerId": null,
+                              "partnerExternalId": null,
+                              "paidPrice": 1420,
+                              "rawPrice": 1320,
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "1165021",
+                                  "uuid": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                                  "origin": {
+                                    "id": 12709,
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "id": 549,
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "priceCents": 1420,
+                                  "feeCents": 0,
+                                  "paidPrice": 1420,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "1764084",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3819,
+                                        "long": 6.72121
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4852,
+                                        "long": 6.5291
+                                      },
+                                      "isBookable": true,
+                                      "priceCents": 1420,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
                               },
-                              "returnTrip": null
-                            },
-                            "passengers": [
-                              {
-                                "id": 6563,
-                                "lastName": "DO BAIRRO",
-                                "firstName": "Dimitri",
-                                "category": "adults",
-                                "discountCards": [],
-                                "title": "MR",
-                                "isCustomer": true,
-                                "age": 28,
-                                "birthDay": 6,
-                                "birthMonth": 5,
-                                "birthYear": 1992
-                              }
-                            ],
-                            "customer": {
-                              "mail": "dimitri.dobairro@tictactrip.eu",
-                              "title": "MR",
-                              "lastName": "DO BAIRRO",
-                              "firstName": "Dimitri",
-                              "birthDay": 6,
-                              "birthMonth": 5,
-                              "birthYear": 1992
+                              "passengers": [
+                                {
+                                  "id": 1445751,
+                                  "lastName": null,
+                                  "firstName": null,
+                                  "title": null,
+                                  "isCustomer": false,
+                                  "discountCardId": null,
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "age": 30,
+                                  "birthdate": null
+                                }
+                              ]
                             }
                           }
                         }
@@ -6107,20 +6121,43 @@
                   }
                 },
                 "404": {
-                  "description": "",
+                  "description": "If cart does not exist",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:cartNotFound",
+                            "errorMessage": "Cart was not found"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
               "description": "Get a cart by its id and its matching order if it exists.",
-              "tags": [
-                "PartnersApi"
-              ],
               "security": [
                 {
                   "authentication": [
@@ -6137,68 +6174,185 @@
                   "schema": {
                     "type": "string"
                   },
-                  "example": "ca2fe467861c405a"
+                  "example": "6771146ca0b7432b"
                 }
               ]
             },
             "patch": {
-              "operationId": "patchCart",
+              "operationId": "UpdateCart",
               "responses": {
                 "200": {
-                  "description": "Updated",
+                  "description": "Ok",
                   "content": {
                     "application/json": {
                       "schema": {
-                        "$ref": "#/components/schemas/CreateCartResponse"
+                        "properties": {
+                          "isAvailable": {
+                            "type": "boolean"
+                          },
+                          "priceCentsDiff": {
+                            "type": "number",
+                            "format": "double"
+                          },
+                          "cart": {
+                            "$ref": "#/components/schemas/ISerializedCart"
+                          }
+                        },
+                        "required": [
+                          "isAvailable",
+                          "priceCentsDiff",
+                          "cart"
+                        ],
+                        "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "cartId": "cbad884d7705432c",
-                            "priceCentsDiff": 0,
-                            "isAvailable": true
+                            "cart": {
+                              "id": "6771146ca0b7432b",
+                              "partnerId": null,
+                              "partnerExternalId": null,
+                              "paidPrice": 1180,
+                              "rawPrice": 1080,
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "1165021",
+                                  "uuid": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                                  "origin": {
+                                    "id": 12709,
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "id": 549,
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "priceCents": 1080,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "1764084",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3819,
+                                        "long": 6.72121
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4852,
+                                        "long": 6.5291
+                                      },
+                                      "isBookable": true,
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 1445752,
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "title": "MR",
+                                  "isCustomer": true,
+                                  "discountCardId": null,
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "age": 30,
+                                  "birthdate": "1992-09-09T00:00:00.000Z"
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "lastName",
+                                "firstName": "firstName",
+                                "birthdate": "1992-09-09T00:00:00.000Z"
+                              }
+                            },
+                            "isAvailable": false
                           }
                         }
                       }
                     }
                   }
                 },
-                "400": {
-                  "description": "",
+                "404": {
+                  "description": "If cart does not exist",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:cartNotFound",
+                            "errorMessage": "Cart was not found"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "500": {
-                  "description": "",
+                  "description": "If an unexpected error occurred",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
-              "description": "Updates a cart with the provided informations. A price lookup is done once the cart is updated.\nNote that a cart cannot be patched once confirmed.",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "\nUpdates a cart with the provided informations. A price lookup is done once the cart is updated.",
               "security": [
                 {
                   "authentication": [
-                    "bookPartner",
-                    "admin"
+                    "admin",
+                    "bookPartner"
                   ]
                 }
               ],
               "parameters": [
                 {
-                  "description": "Id of the cart to update",
                   "in": "path",
                   "name": "cartId",
                   "required": true,
@@ -6208,173 +6362,144 @@
                 }
               ],
               "requestBody": {
-                "description": "Additional cart data",
                 "required": true,
                 "content": {
                   "application/json": {
                     "schema": {
-                      "$ref": "#/components/schemas/IPatchCartBody"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "/v2/redirect": {
-            "get": {
-              "operationId": "Redirect",
-              "responses": {
-                "302": {
-                  "description": ""
-                }
-              },
-              "description": "Create a cart and redirect on the corresponding info page",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [],
-              "parameters": [
-                {
-                  "description": "Outbound trip id",
-                  "in": "query",
-                  "name": "outboundTripId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "example": "2b5fc87d17454128"
-                },
-                {
-                  "description": "Cart passengers. It must have the same structure as the ICreateCartPassenger schema, and should at least contain the passengers' age.",
-                  "in": "query",
-                  "name": "passengers",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "example": "[{\"id\":1,\"category\":\"adult\",\"age\":25,\"discountCards\":[{\"id\":\"CARD_ID\",\"label\":\"LABEL\",\"cardCode\":\"RANDOM_CODE\",\"visibility\":1,\"isIdRequired\":false}],\"discountCardId\":\"A0123456789\",\"title\":\"MR\",\"firstName\":\"  john  \",\"lastName\":\"  doe  \",\"birthDay\":1,\"birthMonth\":5,\"birthYear\":1994,\"isCustomer\":false}]"
-                },
-                {
-                  "description": "The partner identifier provided by Tictactrip. It should be present for every call on this endpoint made by the partner.",
-                  "in": "query",
-                  "name": "partnerId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "examples": {
-                    "Example 1": {
-                      "value": "TEST-PARTNER"
-                    },
-                    "Example 2": {
-                      "value": "a45f691b3932"
-                    }
-                  }
-                },
-                {
-                  "description": "Return trip id. Should be empty for a one-way only trip.",
-                  "in": "query",
-                  "name": "returnTripId",
-                  "required": false,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "example": "1ee8638324f2453e"
-                },
-                {
-                  "description": "The partnerExternalId should be unique for each call and is provided by the partner in the format of its  choice. It is used to keep track of what partner's click led to our website.",
-                  "in": "query",
-                  "name": "partnerExternalId",
-                  "required": false,
-                  "schema": {
-                    "type": "string"
-                  }
-                }
-              ]
-            }
-          },
-          "/v2/carts": {
-            "post": {
-              "operationId": "createCart",
-              "responses": {
-                "201": {
-                  "description": "OK",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/CreateCartResponse"
-                      },
-                      "examples": {
-                        "Example 1": {
-                          "value": {
-                            "cartId": "cbad884d7705432c",
-                            "priceCentsDiff": 0,
-                            "isAvailable": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "500": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Creates a cart. Has to contain at least an outbound trip id for it to work.\nCustomer and passengers informations can be provided later on by patching the cart.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "bookPartner",
-                    "admin"
-                  ]
-                }
-              ],
-              "parameters": [],
-              "requestBody": {
-                "description": "Cart data",
-                "required": true,
-                "content": {
-                  "application/json": {
-                    "schema": {
-                      "$ref": "#/components/schemas/CreateCartBody"
+                      "$ref": "#/components/schemas/Pick_ICreateCartBody.customer-or-passengers_"
                     },
                     "example": {
-                      "outboundTripId": "f4ab0269-2a76-408f-80e7-0414becd73db",
-                      "returnTripId": "70df2cab-5c54-4d6f-8910-45e38291dad1"
+                      "passengers": [
+                        {
+                          "lastName": "name",
+                          "discountCards": [],
+                          "isCustomer": true,
+                          "title": "MR",
+                          "firstName": "firstName",
+                          "category": "adults",
+                          "age": 25,
+                          "birthdate": "1992-09-09"
+                        }
+                      ],
+                      "customer": {
+                        "lastName": "lastName",
+                        "mail": "mail@mail.com",
+                        "isSubscribedToNewsletter": false,
+                        "title": "MR",
+                        "firstName": "firstName",
+                        "birthdate": "1992-09-09"
+                      }
                     }
                   }
                 }
               }
             }
           },
-          "/v2/carts/{cartId}/confirm": {
+          "/booking/v3/carts": {
             "post": {
-              "operationId": "confirmCart",
+              "operationId": "CreateCart",
               "responses": {
-                "200": {
-                  "description": "OK",
+                "201": {
+                  "description": "",
                   "content": {
                     "application/json": {
                       "schema": {
-                        "$ref": "#/components/schemas/IApiConfirmedCart"
+                        "properties": {
+                          "cart": {
+                            "$ref": "#/components/schemas/ISerializedCart"
+                          }
+                        },
+                        "required": [
+                          "cart"
+                        ],
+                        "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "cartId": "cbad884d7705432c",
-                            "priceCentsDiff": 0,
-                            "isAvailable": true,
-                            "confirmedUntil": "2021-07-08T12:21:35.307Z"
+                            "cart": {
+                              "id": "6771146ca0b7432b",
+                              "partnerId": null,
+                              "partnerExternalId": null,
+                              "paidPrice": 1420,
+                              "rawPrice": 1320,
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "1165021",
+                                  "uuid": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                                  "origin": {
+                                    "id": 12709,
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "id": 549,
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "priceCents": 1420,
+                                  "feeCents": 0,
+                                  "paidPrice": 1420,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "1764084",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3819,
+                                        "long": 6.72121
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4852,
+                                        "long": 6.5291
+                                      },
+                                      "isBookable": true,
+                                      "priceCents": 1420,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 1445751,
+                                  "lastName": null,
+                                  "firstName": null,
+                                  "title": null,
+                                  "isCustomer": false,
+                                  "discountCardId": null,
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "age": 30,
+                                  "birthdate": null
+                                }
+                              ]
+                            }
                           }
                         }
                       }
@@ -6382,160 +6507,61 @@
                   }
                 },
                 "400": {
-                  "description": "",
+                  "description": "If trip does not exist or has expired",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "This routes enables to \"lock\" a cart by filling in its confirmedAt column.\nThis is used to prevent cart patching once confirmed, and to garanty no price changes when creating the order in the confirmedUntil time window. This time window is currently of 6 minutes.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "admin",
-                    "bookPartner"
-                  ]
-                }
-              ],
-              "parameters": [
-                {
-                  "description": "Id of the cart to update",
-                  "in": "path",
-                  "name": "cartId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  }
-                }
-              ]
-            }
-          },
-          "/v2/orders/{orderId}": {
-            "get": {
-              "operationId": "getOrder",
-              "responses": {
-                "200": {
-                  "description": "OK",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/TApiOrder"
                       },
                       "examples": {
-                        "Example 1": {}
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:tripExpired",
+                            "errorMessage": "The trip does not exist or has expired"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "404": {
-                  "description": "",
+                  "description": "If partner is not found",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "partnersApi:client:partnerNotFound",
+                            "errorMessage": "Partner was not found"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "500": {
-                  "description": "",
+                  "description": "If an unexpected error occurred",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
-              "description": "Retrieves the order from the given cart ID.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "admin",
-                    "bookPartner"
-                  ]
-                }
-              ],
-              "parameters": [
-                {
-                  "in": "path",
-                  "name": "orderId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  }
-                },
-                {
-                  "in": "header",
-                  "name": "user-lang",
-                  "required": false,
-                  "schema": {
-                    "type": "string"
-                  }
-                }
-              ]
-            }
-          },
-          "/v2/orders": {
-            "post": {
-              "operationId": "createOrder",
-              "responses": {
-                "201": {
-                  "description": "Created",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/TApiCreatedOrder"
-                      }
-                    }
-                  }
-                },
-                "400": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "404": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "500": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Creates an order. It uses the cart's informations to build the order from it.\nThe cart has to be confirmed in order to create an order from it.",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Creates a cart. Has to contain at least an outbound trip id for it to work.",
               "security": [
                 {
                   "authentication": [
@@ -6550,16 +6576,25 @@
                 "content": {
                   "application/json": {
                     "schema": {
-                      "$ref": "#/components/schemas/IApiPostOrderParams"
+                      "$ref": "#/components/schemas/ICreateCartBody"
+                    },
+                    "example": {
+                      "outboundTripId": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                      "passengers": [
+                        {
+                          "age": 30,
+                          "discountCards": []
+                        }
+                      ]
                     }
                   }
                 }
               }
             }
           },
-          "/v2/orders/book": {
-            "post": {
-              "operationId": "createBookOrder",
+          "/booking/v3/orders/{orderId}": {
+            "get": {
+              "operationId": "GetOrder",
               "responses": {
                 "200": {
                   "description": "OK",
@@ -6567,139 +6602,153 @@
                     "application/json": {
                       "schema": {
                         "properties": {
-                          "orderId": {
-                            "type": "string"
+                          "order": {
+                            "$ref": "#/components/schemas/ISerializedOrder"
                           }
                         },
                         "required": [
-                          "orderId"
+                          "order"
                         ],
                         "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "orderId": "0016707204c64424"
+                            "order": {
+                              "id": "8bc8557793fe4447",
+                              "orderDate": "2022-09-09T15:30:02.896Z",
+                              "cartId": "6771146ca0b7432b",
+                              "orderStatus": "CREATED",
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "309496",
+                                  "origin": {
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "priceCents": 1180,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "406308",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3886,
+                                        "long": 6.7163
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4867,
+                                        "long": 6.5311
+                                      },
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "isBookable": true,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 349410,
+                                  "title": "MR",
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "isCustomer": true,
+                                  "age": 30,
+                                  "birthDay": 9,
+                                  "birthMonth": 9,
+                                  "birthYear": 1992,
+                                  "discountCardId": null
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "name",
+                                "firstName": "firstName",
+                                "birthDay": 9,
+                                "birthMonth": 9,
+                                "birthYear": 1992
+                              },
+                              "paymentStatus": "ACCEPTED"
+                            }
                           }
                         }
                       }
                     }
                   }
                 },
-                "202": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "402": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
                 "404": {
-                  "description": "",
+                  "description": "If order does not exist",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "500": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Books an order.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "admin",
-                    "bookPartner"
-                  ]
-                }
-              ],
-              "parameters": [],
-              "requestBody": {
-                "required": true,
-                "content": {
-                  "application/json": {
-                    "schema": {
-                      "properties": {
-                        "orderId": {
-                          "type": "string"
-                        }
                       },
-                      "required": [
-                        "orderId"
-                      ],
-                      "type": "object"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "/v2/orders/{orderId}/download/{filename}": {
-            "get": {
-              "operationId": "downloadTicket",
-              "responses": {
-                "200": {
-                  "description": "OK",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "type": "string",
-                        "format": "byte"
-                      }
-                    }
-                  }
-                },
-                "404": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "orders:client:orderNotFound",
+                            "errorMessage": "Order was not found"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "500": {
-                  "description": "",
+                  "description": "If an unexpected error occurred",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
-              "description": "Returns a booked order's tickets.",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Retrieves the order from the given cart ID.",
               "security": [
                 {
                   "authentication": [
@@ -6715,15 +6764,441 @@
                   "required": true,
                   "schema": {
                     "type": "string"
+                  },
+                  "example": "8bc8557793fe4447"
+                }
+              ]
+            }
+          },
+          "/booking/v3/orders": {
+            "post": {
+              "operationId": "CreateOrder",
+              "responses": {
+                "201": {
+                  "description": "OK",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/ICreateOrderResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "order": {
+                              "id": "8bc8557793fe4447",
+                              "orderDate": "2022-09-09T13:24:15.533Z",
+                              "cartId": "6771146ca0b7432b",
+                              "orderStatus": "CREATED",
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "309495",
+                                  "origin": {
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "priceCents": 1180,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "406307",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3886,
+                                        "long": 6.7163
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4867,
+                                        "long": 6.5311
+                                      },
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "isBookable": true,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 349409,
+                                  "title": "MR",
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "isCustomer": true,
+                                  "age": 30,
+                                  "birthDay": 9,
+                                  "birthMonth": 9,
+                                  "birthYear": 1992,
+                                  "discountCardId": null
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "name",
+                                "firstName": "firstName",
+                                "birthDay": 9,
+                                "birthMonth": 9,
+                                "birthYear": 1992
+                              },
+                              "paymentStatus": "ACCEPTED"
+                            },
+                            "priceCentsDiff": 0,
+                            "isAvailable": true,
+                            "expiresAt": "2022-09-09T13:39:15.533Z",
+                            "paylineToken": null
+                          }
+                        }
+                      }
+                    }
                   }
                 },
+                "404": {
+                  "description": "If the customer information for this cart are not found",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:cartCustomerNotFound",
+                            "errorMessage": "Customer information for this cart were not found"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Creates an order. It uses the cart's information to build the order from it.\nThe cart must have been patched with customer information and at least one passenger.",
+              "security": [
+                {
+                  "authentication": [
+                    "admin",
+                    "bookPartner"
+                  ]
+                }
+              ],
+              "parameters": [],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ICreateOrderPayload"
+                    },
+                    "example": {
+                      "cartId": "6771146ca0b7432b"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/booking/v3/discountCards": {
+            "get": {
+              "operationId": "GetDiscountCards",
+              "responses": {
+                "200": {
+                  "description": "OK",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "items": {
+                          "$ref": "#/components/schemas/IDiscountCard"
+                        },
+                        "type": "array"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": [
+                            {
+                              "id": "TTT_ADULT_PASS",
+                              "label": "Avantage Adulte",
+                              "visibility": 7,
+                              "cardCode": "WEEKEND_PASS",
+                              "isIdRequired": true
+                            },
+                            {
+                              "id": "TTT_VSC_YOUNG_PASS",
+                              "label": "Avantage Jeune",
+                              "visibility": 6,
+                              "cardCode": "YOUNG_PASS",
+                              "isIdRequired": true
+                            },
+                            {
+                              "id": "TTT_VSC_SENIOR_PASS",
+                              "label": "Avantage Senior",
+                              "visibility": 5,
+                              "cardCode": "SENIOR_PASS",
+                              "isIdRequired": true
+                            },
+                            {
+                              "id": "TTT_VSC_FAM30",
+                              "label": "Famille nombreuse 30%",
+                              "visibility": 4,
+                              "cardCode": "FAM30",
+                              "isIdRequired": false
+                            },
+                            {
+                              "id": "TTT_VSC_FAM40",
+                              "label": "Famille nombreuse 40%",
+                              "visibility": 3,
+                              "cardCode": "FAM40",
+                              "isIdRequired": false
+                            },
+                            {
+                              "id": "TTT_VSC_FAM50",
+                              "label": "Famille nombreuse 50%",
+                              "visibility": 2,
+                              "cardCode": "FAM50",
+                              "isIdRequired": false
+                            },
+                            {
+                              "id": "TTT_VSC_FAM75",
+                              "label": "Famille nombreuse 75%",
+                              "visibility": 1,
+                              "cardCode": "FAM75",
+                              "isIdRequired": false
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Returns all available discount cards.",
+              "security": [],
+              "parameters": []
+            }
+          },
+          "/booking/v3/orders/{orderId}/book": {
+            "post": {
+              "operationId": "CreateBook",
+              "responses": {
+                "202": {
+                  "description": "Booking in progress",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "properties": {
+                          "order": {
+                            "$ref": "#/components/schemas/ISerializedOrder"
+                          }
+                        },
+                        "required": [
+                          "order"
+                        ],
+                        "type": "object"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "order": {
+                              "id": "8bc8557793fe4447",
+                              "orderDate": "2022-09-09T15:30:02.896Z",
+                              "cartId": "6771146ca0b7432b",
+                              "orderStatus": "PENDING_BOOKING",
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "309496",
+                                  "origin": {
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "priceCents": 1180,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "406308",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3886,
+                                        "long": 6.7163
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4867,
+                                        "long": 6.5311
+                                      },
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "isBookable": true,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 349410,
+                                  "title": "MR",
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "isCustomer": true,
+                                  "age": 30,
+                                  "birthDay": 9,
+                                  "birthMonth": 9,
+                                  "birthYear": 1992,
+                                  "discountCardId": null
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "name",
+                                "firstName": "firstName",
+                                "birthDay": 9,
+                                "birthMonth": 9,
+                                "birthYear": 1992
+                              },
+                              "paymentStatus": "ACCEPTED"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Books asynchronously an order.",
+              "security": [
+                {
+                  "authentication": [
+                    "admin",
+                    "bookPartner"
+                  ]
+                }
+              ],
+              "parameters": [
                 {
                   "in": "path",
-                  "name": "filename",
+                  "name": "orderId",
                   "required": true,
                   "schema": {
                     "type": "string"
-                  }
+                  },
+                  "example": "8bc8557793fe4447"
                 }
               ]
             }
@@ -7510,10 +7985,12 @@
                   "$ref": "#/components/schemas/ICartCustomer"
                 },
                 "partnerId": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "partnerExternalId": {
                   "type": "string",
+                  "nullable": true,
                   "description": "Matches an id provided from a partner. It is used to keep track of the partner's orders and enables an order match between their system and our own"
                 }
               },
@@ -9803,7 +10280,8 @@
                   "format": "double"
                 },
                 "partnerId": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -11522,7 +12000,7 @@
         },
         "info": {
           "title": "@tictactrip/api",
-          "version": "2.529.0",
+          "version": "2.533.0",
           "description": "Tictactrip's API service",
           "license": {
             "name": "UNLICENSED"
@@ -11535,9 +12013,85 @@
         },
         "openapi": "3.0.0",
         "paths": {
+          "/orderETickets/{orderId}/download/{filename}": {
+            "get": {
+              "operationId": "DownloadTicket",
+              "responses": {
+                "200": {
+                  "description": "OK",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "string",
+                        "format": "byte"
+                      }
+                    }
+                  }
+                },
+                "404": {
+                  "description": "If no order is found",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "orderEtickets:client:orderNotFound",
+                            "errorMessage": "Order was not found"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Download an order Eticket and gives the name provided to the file.",
+              "security": [],
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "orderId",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  },
+                  "example": "8bc8557793fe4447"
+                },
+                {
+                  "in": "path",
+                  "name": "filename",
+                  "required": true,
+                  "schema": {
+                    "type": "string"
+                  },
+                  "example": "myTicket"
+                }
+              ]
+            }
+          },
           "/v2/stopGroups": {
             "get": {
-              "operationId": "getAllStopGroups",
+              "operationId": "GetAllStopGroups",
               "responses": {
                 "200": {
                   "description": "OK",
@@ -11571,12 +12125,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns the list of all StopGroups",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns the list of all StopGroups.",
               "security": [
                 {
                   "authentication": [
@@ -11591,7 +12160,7 @@
           },
           "/v2/stopGroups/{stopGroupGpuid}": {
             "get": {
-              "operationId": "getStopGroup",
+              "operationId": "GetStopGroup",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -11638,12 +12207,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns a StopGroup details",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns a StopGroup details.",
               "security": [
                 {
                   "authentication": [
@@ -11668,7 +12252,7 @@
           },
           "/v2/stopClusters": {
             "get": {
-              "operationId": "getAllStopClusters",
+              "operationId": "GetAllStopClusters",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -11696,12 +12280,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns the list of all StopClusters",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns the list of all StopClusters.",
               "security": [
                 {
                   "authentication": [
@@ -11716,7 +12315,7 @@
           },
           "/v2/stopClusters/{stopClusterGpuid}": {
             "get": {
-              "operationId": "getStopCluster",
+              "operationId": "GetStopCluster",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -11757,12 +12356,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
-              "description": "Returns a StopCluster details",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Returns a StopCluster details.",
               "security": [
                 {
                   "authentication": [
@@ -11785,53 +12399,9 @@
               ]
             }
           },
-          "/v2/providers": {
-            "get": {
-              "operationId": "getProviders",
-              "responses": {
-                "200": {
-                  "description": "Ok",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "items": {
-                          "$ref": "#/components/schemas/IApiProvider"
-                        },
-                        "type": "array"
-                      },
-                      "examples": {
-                        "Example 1": {
-                          "value": [
-                            {
-                              "name": "Altibus",
-                              "transportType": "bus"
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Returns the list of all providers",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "bookPartner",
-                    "searchPartner",
-                    "admin"
-                  ]
-                }
-              ],
-              "parameters": []
-            }
-          },
           "/v2/results": {
             "post": {
-              "operationId": "getResults",
+              "operationId": "GetResults",
               "responses": {
                 "200": {
                   "description": "Ok",
@@ -11974,12 +12544,27 @@
                       }
                     }
                   }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               },
               "description": "Fetch results. Ignore search request that are further than 1800KM.",
-              "tags": [
-                "PartnersApi"
-              ],
               "security": [
                 {
                   "authentication": [
@@ -12013,105 +12598,110 @@
               }
             }
           },
-          "/v2/carts/{cartId}": {
+          "/booking/v3/carts/{cartId}": {
             "get": {
-              "operationId": "getCart",
+              "operationId": "GetCart",
               "responses": {
                 "200": {
                   "description": "OK",
                   "content": {
                     "application/json": {
                       "schema": {
-                        "$ref": "#/components/schemas/TApiCart"
+                        "properties": {
+                          "cart": {
+                            "$ref": "#/components/schemas/ISerializedCart"
+                          }
+                        },
+                        "required": [
+                          "cart"
+                        ],
+                        "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "id": "ca2fe467861c405a",
                             "cart": {
-                              "outboundTrip": {
-                                "id": "6162",
-                                "uuid": "00000000-0000-0000-0000-000000000000",
-                                "origin": {
-                                  "city": "Paris",
-                                  "country": "France",
-                                  "station": "Marne-la-Vallée Chessy Disneyland Paris"
-                                },
-                                "destination": {
-                                  "city": "Lille",
-                                  "country": "France",
-                                  "station": "Lille Europe"
-                                },
-                                "originOffset": "+0200",
-                                "destinationOffset": "+0200",
-                                "priceCents": 2750,
-                                "feeCents": 0,
-                                "paidPrice": 2750,
-                                "departureUTC": 1600887060,
-                                "arrivalUTC": 1600891080,
-                                "durationMinutes": 67,
-                                "companies": [
-                                  "TGV"
-                                ],
-                                "co2g": 1000,
-                                "segments": [
-                                  {
-                                    "id": "8800",
-                                    "company": "TGV",
-                                    "mean": "train",
-                                    "origin": {
-                                      "city": "Paris",
-                                      "country": "France",
-                                      "station": "Marne-la-Vallée Chessy Disneyland Paris",
-                                      "lat": 48.8566,
-                                      "long": 2.3515
-                                    },
-                                    "destination": {
-                                      "city": "Lille",
-                                      "country": "France",
-                                      "station": "Lille Europe",
-                                      "lat": 50.638756,
-                                      "long": 3.076675
-                                    },
-                                    "isBookable": true,
-                                    "priceCents": 2750,
-                                    "feeCents": 0,
-                                    "includedProviderFeeCents": 0,
-                                    "departureUTC": 1600887060,
-                                    "arrivalUTC": 1600891080,
-                                    "originOffset": "+0200",
-                                    "destinationOffset": "+0200",
-                                    "durationMinutes": 67,
-                                    "redirectionLink": "/redirect?company=10&origin=FRMLV&destination=FRLLE&date=23/09/2020&time=18&passengers=[{\"profile\":\"ADULT\",\"card\":\"\"}]&env=production"
-                                  }
-                                ],
-                                "mean": "TRAIN"
+                              "id": "6771146ca0b7432b",
+                              "partnerId": null,
+                              "partnerExternalId": null,
+                              "paidPrice": 1420,
+                              "rawPrice": 1320,
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "1165021",
+                                  "uuid": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                                  "origin": {
+                                    "id": 12709,
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "id": 549,
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "priceCents": 1420,
+                                  "feeCents": 0,
+                                  "paidPrice": 1420,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "1764084",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3819,
+                                        "long": 6.72121
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4852,
+                                        "long": 6.5291
+                                      },
+                                      "isBookable": true,
+                                      "priceCents": 1420,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
                               },
-                              "returnTrip": null
-                            },
-                            "passengers": [
-                              {
-                                "id": 6563,
-                                "lastName": "DO BAIRRO",
-                                "firstName": "Dimitri",
-                                "category": "adults",
-                                "discountCards": [],
-                                "title": "MR",
-                                "isCustomer": true,
-                                "age": 28,
-                                "birthDay": 6,
-                                "birthMonth": 5,
-                                "birthYear": 1992
-                              }
-                            ],
-                            "customer": {
-                              "mail": "dimitri.dobairro@tictactrip.eu",
-                              "title": "MR",
-                              "lastName": "DO BAIRRO",
-                              "firstName": "Dimitri",
-                              "birthDay": 6,
-                              "birthMonth": 5,
-                              "birthYear": 1992
+                              "passengers": [
+                                {
+                                  "id": 1445751,
+                                  "lastName": null,
+                                  "firstName": null,
+                                  "title": null,
+                                  "isCustomer": false,
+                                  "discountCardId": null,
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "age": 30,
+                                  "birthdate": null
+                                }
+                              ]
                             }
                           }
                         }
@@ -12120,20 +12710,43 @@
                   }
                 },
                 "404": {
-                  "description": "",
+                  "description": "If cart does not exist",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:cartNotFound",
+                            "errorMessage": "Cart was not found"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
               "description": "Get a cart by its id and its matching order if it exists.",
-              "tags": [
-                "PartnersApi"
-              ],
               "security": [
                 {
                   "authentication": [
@@ -12150,68 +12763,185 @@
                   "schema": {
                     "type": "string"
                   },
-                  "example": "ca2fe467861c405a"
+                  "example": "6771146ca0b7432b"
                 }
               ]
             },
             "patch": {
-              "operationId": "patchCart",
+              "operationId": "UpdateCart",
               "responses": {
                 "200": {
-                  "description": "Updated",
+                  "description": "Ok",
                   "content": {
                     "application/json": {
                       "schema": {
-                        "$ref": "#/components/schemas/CreateCartResponse"
+                        "properties": {
+                          "isAvailable": {
+                            "type": "boolean"
+                          },
+                          "priceCentsDiff": {
+                            "type": "number",
+                            "format": "double"
+                          },
+                          "cart": {
+                            "$ref": "#/components/schemas/ISerializedCart"
+                          }
+                        },
+                        "required": [
+                          "isAvailable",
+                          "priceCentsDiff",
+                          "cart"
+                        ],
+                        "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "cartId": "cbad884d7705432c",
-                            "priceCentsDiff": 0,
-                            "isAvailable": true
+                            "cart": {
+                              "id": "6771146ca0b7432b",
+                              "partnerId": null,
+                              "partnerExternalId": null,
+                              "paidPrice": 1180,
+                              "rawPrice": 1080,
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "1165021",
+                                  "uuid": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                                  "origin": {
+                                    "id": 12709,
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "id": 549,
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "priceCents": 1080,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "1764084",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3819,
+                                        "long": 6.72121
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4852,
+                                        "long": 6.5291
+                                      },
+                                      "isBookable": true,
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 1445752,
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "title": "MR",
+                                  "isCustomer": true,
+                                  "discountCardId": null,
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "age": 30,
+                                  "birthdate": "1992-09-09T00:00:00.000Z"
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "lastName",
+                                "firstName": "firstName",
+                                "birthdate": "1992-09-09T00:00:00.000Z"
+                              }
+                            },
+                            "isAvailable": false
                           }
                         }
                       }
                     }
                   }
                 },
-                "400": {
-                  "description": "",
+                "404": {
+                  "description": "If cart does not exist",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:cartNotFound",
+                            "errorMessage": "Cart was not found"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "500": {
-                  "description": "",
+                  "description": "If an unexpected error occurred",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
-              "description": "Updates a cart with the provided informations. A price lookup is done once the cart is updated.\nNote that a cart cannot be patched once confirmed.",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "\nUpdates a cart with the provided informations. A price lookup is done once the cart is updated.",
               "security": [
                 {
                   "authentication": [
-                    "bookPartner",
-                    "admin"
+                    "admin",
+                    "bookPartner"
                   ]
                 }
               ],
               "parameters": [
                 {
-                  "description": "Id of the cart to update",
                   "in": "path",
                   "name": "cartId",
                   "required": true,
@@ -12221,173 +12951,144 @@
                 }
               ],
               "requestBody": {
-                "description": "Additional cart data",
                 "required": true,
                 "content": {
                   "application/json": {
                     "schema": {
-                      "$ref": "#/components/schemas/IPatchCartBody"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "/v2/redirect": {
-            "get": {
-              "operationId": "Redirect",
-              "responses": {
-                "302": {
-                  "description": ""
-                }
-              },
-              "description": "Create a cart and redirect on the corresponding info page",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [],
-              "parameters": [
-                {
-                  "description": "Outbound trip id",
-                  "in": "query",
-                  "name": "outboundTripId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "example": "2b5fc87d17454128"
-                },
-                {
-                  "description": "Cart passengers. It must have the same structure as the ICreateCartPassenger schema, and should at least contain the passengers' age.",
-                  "in": "query",
-                  "name": "passengers",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "example": "[{\"id\":1,\"category\":\"adult\",\"age\":25,\"discountCards\":[{\"id\":\"CARD_ID\",\"label\":\"LABEL\",\"cardCode\":\"RANDOM_CODE\",\"visibility\":1,\"isIdRequired\":false}],\"discountCardId\":\"A0123456789\",\"title\":\"MR\",\"firstName\":\"  john  \",\"lastName\":\"  doe  \",\"birthDay\":1,\"birthMonth\":5,\"birthYear\":1994,\"isCustomer\":false}]"
-                },
-                {
-                  "description": "The partner identifier provided by Tictactrip. It should be present for every call on this endpoint made by the partner.",
-                  "in": "query",
-                  "name": "partnerId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "examples": {
-                    "Example 1": {
-                      "value": "TEST-PARTNER"
-                    },
-                    "Example 2": {
-                      "value": "a45f691b3932"
-                    }
-                  }
-                },
-                {
-                  "description": "Return trip id. Should be empty for a one-way only trip.",
-                  "in": "query",
-                  "name": "returnTripId",
-                  "required": false,
-                  "schema": {
-                    "type": "string"
-                  },
-                  "example": "1ee8638324f2453e"
-                },
-                {
-                  "description": "The partnerExternalId should be unique for each call and is provided by the partner in the format of its  choice. It is used to keep track of what partner's click led to our website.",
-                  "in": "query",
-                  "name": "partnerExternalId",
-                  "required": false,
-                  "schema": {
-                    "type": "string"
-                  }
-                }
-              ]
-            }
-          },
-          "/v2/carts": {
-            "post": {
-              "operationId": "createCart",
-              "responses": {
-                "201": {
-                  "description": "OK",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/CreateCartResponse"
-                      },
-                      "examples": {
-                        "Example 1": {
-                          "value": {
-                            "cartId": "cbad884d7705432c",
-                            "priceCentsDiff": 0,
-                            "isAvailable": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "500": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Creates a cart. Has to contain at least an outbound trip id for it to work.\nCustomer and passengers informations can be provided later on by patching the cart.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "bookPartner",
-                    "admin"
-                  ]
-                }
-              ],
-              "parameters": [],
-              "requestBody": {
-                "description": "Cart data",
-                "required": true,
-                "content": {
-                  "application/json": {
-                    "schema": {
-                      "$ref": "#/components/schemas/CreateCartBody"
+                      "$ref": "#/components/schemas/Pick_ICreateCartBody.customer-or-passengers_"
                     },
                     "example": {
-                      "outboundTripId": "f4ab0269-2a76-408f-80e7-0414becd73db",
-                      "returnTripId": "70df2cab-5c54-4d6f-8910-45e38291dad1"
+                      "passengers": [
+                        {
+                          "lastName": "name",
+                          "discountCards": [],
+                          "isCustomer": true,
+                          "title": "MR",
+                          "firstName": "firstName",
+                          "category": "adults",
+                          "age": 25,
+                          "birthdate": "1992-09-09"
+                        }
+                      ],
+                      "customer": {
+                        "lastName": "lastName",
+                        "mail": "mail@mail.com",
+                        "isSubscribedToNewsletter": false,
+                        "title": "MR",
+                        "firstName": "firstName",
+                        "birthdate": "1992-09-09"
+                      }
                     }
                   }
                 }
               }
             }
           },
-          "/v2/carts/{cartId}/confirm": {
+          "/booking/v3/carts": {
             "post": {
-              "operationId": "confirmCart",
+              "operationId": "CreateCart",
               "responses": {
-                "200": {
-                  "description": "OK",
+                "201": {
+                  "description": "",
                   "content": {
                     "application/json": {
                       "schema": {
-                        "$ref": "#/components/schemas/IApiConfirmedCart"
+                        "properties": {
+                          "cart": {
+                            "$ref": "#/components/schemas/ISerializedCart"
+                          }
+                        },
+                        "required": [
+                          "cart"
+                        ],
+                        "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "cartId": "cbad884d7705432c",
-                            "priceCentsDiff": 0,
-                            "isAvailable": true,
-                            "confirmedUntil": "2021-07-08T12:21:35.307Z"
+                            "cart": {
+                              "id": "6771146ca0b7432b",
+                              "partnerId": null,
+                              "partnerExternalId": null,
+                              "paidPrice": 1420,
+                              "rawPrice": 1320,
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "1165021",
+                                  "uuid": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                                  "origin": {
+                                    "id": 12709,
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "id": 549,
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "priceCents": 1420,
+                                  "feeCents": 0,
+                                  "paidPrice": 1420,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "1764084",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3819,
+                                        "long": 6.72121
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4852,
+                                        "long": 6.5291
+                                      },
+                                      "isBookable": true,
+                                      "priceCents": 1420,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 1445751,
+                                  "lastName": null,
+                                  "firstName": null,
+                                  "title": null,
+                                  "isCustomer": false,
+                                  "discountCardId": null,
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "age": 30,
+                                  "birthdate": null
+                                }
+                              ]
+                            }
                           }
                         }
                       }
@@ -12395,160 +13096,61 @@
                   }
                 },
                 "400": {
-                  "description": "",
+                  "description": "If trip does not exist or has expired",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "This routes enables to \"lock\" a cart by filling in its confirmedAt column.\nThis is used to prevent cart patching once confirmed, and to garanty no price changes when creating the order in the confirmedUntil time window. This time window is currently of 6 minutes.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "admin",
-                    "bookPartner"
-                  ]
-                }
-              ],
-              "parameters": [
-                {
-                  "description": "Id of the cart to update",
-                  "in": "path",
-                  "name": "cartId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  }
-                }
-              ]
-            }
-          },
-          "/v2/orders/{orderId}": {
-            "get": {
-              "operationId": "getOrder",
-              "responses": {
-                "200": {
-                  "description": "OK",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/TApiOrder"
                       },
                       "examples": {
-                        "Example 1": {}
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:tripExpired",
+                            "errorMessage": "The trip does not exist or has expired"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "404": {
-                  "description": "",
+                  "description": "If partner is not found",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "partnersApi:client:partnerNotFound",
+                            "errorMessage": "Partner was not found"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "500": {
-                  "description": "",
+                  "description": "If an unexpected error occurred",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
-              "description": "Retrieves the order from the given cart ID.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "admin",
-                    "bookPartner"
-                  ]
-                }
-              ],
-              "parameters": [
-                {
-                  "in": "path",
-                  "name": "orderId",
-                  "required": true,
-                  "schema": {
-                    "type": "string"
-                  }
-                },
-                {
-                  "in": "header",
-                  "name": "user-lang",
-                  "required": false,
-                  "schema": {
-                    "type": "string"
-                  }
-                }
-              ]
-            }
-          },
-          "/v2/orders": {
-            "post": {
-              "operationId": "createOrder",
-              "responses": {
-                "201": {
-                  "description": "Created",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/TApiCreatedOrder"
-                      }
-                    }
-                  }
-                },
-                "400": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "404": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "500": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Creates an order. It uses the cart's informations to build the order from it.\nThe cart has to be confirmed in order to create an order from it.",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Creates a cart. Has to contain at least an outbound trip id for it to work.",
               "security": [
                 {
                   "authentication": [
@@ -12563,16 +13165,25 @@
                 "content": {
                   "application/json": {
                     "schema": {
-                      "$ref": "#/components/schemas/IApiPostOrderParams"
+                      "$ref": "#/components/schemas/ICreateCartBody"
+                    },
+                    "example": {
+                      "outboundTripId": "1f945779-4d9d-47ae-a711-c32bbcbf7639",
+                      "passengers": [
+                        {
+                          "age": 30,
+                          "discountCards": []
+                        }
+                      ]
                     }
                   }
                 }
               }
             }
           },
-          "/v2/orders/book": {
-            "post": {
-              "operationId": "createBookOrder",
+          "/booking/v3/orders/{orderId}": {
+            "get": {
+              "operationId": "GetOrder",
               "responses": {
                 "200": {
                   "description": "OK",
@@ -12580,139 +13191,153 @@
                     "application/json": {
                       "schema": {
                         "properties": {
-                          "orderId": {
-                            "type": "string"
+                          "order": {
+                            "$ref": "#/components/schemas/ISerializedOrder"
                           }
                         },
                         "required": [
-                          "orderId"
+                          "order"
                         ],
                         "type": "object"
                       },
                       "examples": {
                         "Example 1": {
                           "value": {
-                            "orderId": "0016707204c64424"
+                            "order": {
+                              "id": "8bc8557793fe4447",
+                              "orderDate": "2022-09-09T15:30:02.896Z",
+                              "cartId": "6771146ca0b7432b",
+                              "orderStatus": "CREATED",
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "309496",
+                                  "origin": {
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "priceCents": 1180,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "406308",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3886,
+                                        "long": 6.7163
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4867,
+                                        "long": 6.5311
+                                      },
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "isBookable": true,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 349410,
+                                  "title": "MR",
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "isCustomer": true,
+                                  "age": 30,
+                                  "birthDay": 9,
+                                  "birthMonth": 9,
+                                  "birthYear": 1992,
+                                  "discountCardId": null
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "name",
+                                "firstName": "firstName",
+                                "birthDay": 9,
+                                "birthMonth": 9,
+                                "birthYear": 1992
+                              },
+                              "paymentStatus": "ACCEPTED"
+                            }
                           }
                         }
                       }
                     }
                   }
                 },
-                "202": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "402": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
                 "404": {
-                  "description": "",
+                  "description": "If order does not exist",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                },
-                "500": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
-                      }
-                    }
-                  }
-                }
-              },
-              "description": "Books an order.",
-              "tags": [
-                "PartnersApi"
-              ],
-              "security": [
-                {
-                  "authentication": [
-                    "admin",
-                    "bookPartner"
-                  ]
-                }
-              ],
-              "parameters": [],
-              "requestBody": {
-                "required": true,
-                "content": {
-                  "application/json": {
-                    "schema": {
-                      "properties": {
-                        "orderId": {
-                          "type": "string"
-                        }
                       },
-                      "required": [
-                        "orderId"
-                      ],
-                      "type": "object"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "/v2/orders/{orderId}/download/{filename}": {
-            "get": {
-              "operationId": "downloadTicket",
-              "responses": {
-                "200": {
-                  "description": "OK",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "type": "string",
-                        "format": "byte"
-                      }
-                    }
-                  }
-                },
-                "404": {
-                  "description": "",
-                  "content": {
-                    "application/json": {
-                      "schema": {
-                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "orders:client:orderNotFound",
+                            "errorMessage": "Order was not found"
+                          }
+                        }
                       }
                     }
                   }
                 },
                 "500": {
-                  "description": "",
+                  "description": "If an unexpected error occurred",
                   "content": {
                     "application/json": {
                       "schema": {
                         "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
                       }
                     }
                   }
                 }
               },
-              "description": "Returns a booked order's tickets.",
-              "tags": [
-                "PartnersApi"
-              ],
+              "description": "Retrieves the order from the given cart ID.",
               "security": [
                 {
                   "authentication": [
@@ -12728,15 +13353,441 @@
                   "required": true,
                   "schema": {
                     "type": "string"
+                  },
+                  "example": "8bc8557793fe4447"
+                }
+              ]
+            }
+          },
+          "/booking/v3/orders": {
+            "post": {
+              "operationId": "CreateOrder",
+              "responses": {
+                "201": {
+                  "description": "OK",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/ICreateOrderResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "order": {
+                              "id": "8bc8557793fe4447",
+                              "orderDate": "2022-09-09T13:24:15.533Z",
+                              "cartId": "6771146ca0b7432b",
+                              "orderStatus": "CREATED",
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "309495",
+                                  "origin": {
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "priceCents": 1180,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "406307",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3886,
+                                        "long": 6.7163
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4867,
+                                        "long": 6.5311
+                                      },
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "isBookable": true,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 349409,
+                                  "title": "MR",
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "isCustomer": true,
+                                  "age": 30,
+                                  "birthDay": 9,
+                                  "birthMonth": 9,
+                                  "birthYear": 1992,
+                                  "discountCardId": null
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "name",
+                                "firstName": "firstName",
+                                "birthDay": 9,
+                                "birthMonth": 9,
+                                "birthYear": 1992
+                              },
+                              "paymentStatus": "ACCEPTED"
+                            },
+                            "priceCentsDiff": 0,
+                            "isAvailable": true,
+                            "expiresAt": "2022-09-09T13:39:15.533Z",
+                            "paylineToken": null
+                          }
+                        }
+                      }
+                    }
                   }
                 },
+                "404": {
+                  "description": "If the customer information for this cart are not found",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "carts:client:cartCustomerNotFound",
+                            "errorMessage": "Customer information for this cart were not found"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Creates an order. It uses the cart's information to build the order from it.\nThe cart must have been patched with customer information and at least one passenger.",
+              "security": [
+                {
+                  "authentication": [
+                    "admin",
+                    "bookPartner"
+                  ]
+                }
+              ],
+              "parameters": [],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ICreateOrderPayload"
+                    },
+                    "example": {
+                      "cartId": "6771146ca0b7432b"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/booking/v3/discountCards": {
+            "get": {
+              "operationId": "GetDiscountCards",
+              "responses": {
+                "200": {
+                  "description": "OK",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "items": {
+                          "$ref": "#/components/schemas/IDiscountCard"
+                        },
+                        "type": "array"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": [
+                            {
+                              "id": "TTT_ADULT_PASS",
+                              "label": "Avantage Adulte",
+                              "visibility": 7,
+                              "cardCode": "WEEKEND_PASS",
+                              "isIdRequired": true
+                            },
+                            {
+                              "id": "TTT_VSC_YOUNG_PASS",
+                              "label": "Avantage Jeune",
+                              "visibility": 6,
+                              "cardCode": "YOUNG_PASS",
+                              "isIdRequired": true
+                            },
+                            {
+                              "id": "TTT_VSC_SENIOR_PASS",
+                              "label": "Avantage Senior",
+                              "visibility": 5,
+                              "cardCode": "SENIOR_PASS",
+                              "isIdRequired": true
+                            },
+                            {
+                              "id": "TTT_VSC_FAM30",
+                              "label": "Famille nombreuse 30%",
+                              "visibility": 4,
+                              "cardCode": "FAM30",
+                              "isIdRequired": false
+                            },
+                            {
+                              "id": "TTT_VSC_FAM40",
+                              "label": "Famille nombreuse 40%",
+                              "visibility": 3,
+                              "cardCode": "FAM40",
+                              "isIdRequired": false
+                            },
+                            {
+                              "id": "TTT_VSC_FAM50",
+                              "label": "Famille nombreuse 50%",
+                              "visibility": 2,
+                              "cardCode": "FAM50",
+                              "isIdRequired": false
+                            },
+                            {
+                              "id": "TTT_VSC_FAM75",
+                              "label": "Famille nombreuse 75%",
+                              "visibility": 1,
+                              "cardCode": "FAM75",
+                              "isIdRequired": false
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Returns all available discount cards.",
+              "security": [],
+              "parameters": []
+            }
+          },
+          "/booking/v3/orders/{orderId}/book": {
+            "post": {
+              "operationId": "CreateBook",
+              "responses": {
+                "202": {
+                  "description": "Booking in progress",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "properties": {
+                          "order": {
+                            "$ref": "#/components/schemas/ISerializedOrder"
+                          }
+                        },
+                        "required": [
+                          "order"
+                        ],
+                        "type": "object"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "order": {
+                              "id": "8bc8557793fe4447",
+                              "orderDate": "2022-09-09T15:30:02.896Z",
+                              "cartId": "6771146ca0b7432b",
+                              "orderStatus": "PENDING_BOOKING",
+                              "trips": {
+                                "outboundTrip": {
+                                  "id": "309496",
+                                  "origin": {
+                                    "city": "Pralognan La Vanoise",
+                                    "country": "France",
+                                    "station": "PRALOGNAN LA VANOISE Airelles"
+                                  },
+                                  "destination": {
+                                    "city": "Moûtiers",
+                                    "country": "France",
+                                    "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains"
+                                  },
+                                  "priceCents": 1180,
+                                  "feeCents": 0,
+                                  "paidPrice": 1180,
+                                  "departureUTC": 1663561920,
+                                  "arrivalUTC": 1663566300,
+                                  "originOffset": "+0200",
+                                  "destinationOffset": "+0200",
+                                  "durationMinutes": 73,
+                                  "companies": [
+                                    "Altibus"
+                                  ],
+                                  "segments": [
+                                    {
+                                      "id": "406308",
+                                      "company": "Altibus",
+                                      "mean": "bus",
+                                      "origin": {
+                                        "city": "Pralognan La Vanoise",
+                                        "country": "France",
+                                        "station": "PRALOGNAN LA VANOISE Airelles",
+                                        "lat": 45.3886,
+                                        "long": 6.7163
+                                      },
+                                      "destination": {
+                                        "city": "Moûtiers",
+                                        "country": "France",
+                                        "station": "Moûtiers - Salins-les-Thermes - Brides-les-Bains",
+                                        "lat": 45.4867,
+                                        "long": 6.5311
+                                      },
+                                      "priceCents": 1180,
+                                      "feeCents": 100,
+                                      "includedProviderFeeCents": 120,
+                                      "departureUTC": 1663561920,
+                                      "arrivalUTC": 1663566300,
+                                      "originOffset": "+0200",
+                                      "destinationOffset": "+0200",
+                                      "durationMinutes": 73,
+                                      "isBookable": true,
+                                      "redirectionLink": "/redirect?company=21&trip=MOG577&date=19/09/2022&env=production"
+                                    }
+                                  ],
+                                  "mean": "BUS",
+                                  "co2g": 669
+                                }
+                              },
+                              "passengers": [
+                                {
+                                  "id": 349410,
+                                  "title": "MR",
+                                  "lastName": "name",
+                                  "firstName": "firstName",
+                                  "category": "adults",
+                                  "discountCards": [],
+                                  "isCustomer": true,
+                                  "age": 30,
+                                  "birthDay": 9,
+                                  "birthMonth": 9,
+                                  "birthYear": 1992,
+                                  "discountCardId": null
+                                }
+                              ],
+                              "customer": {
+                                "mail": "mail@mail.com",
+                                "title": "MR",
+                                "lastName": "name",
+                                "firstName": "firstName",
+                                "birthDay": 9,
+                                "birthMonth": 9,
+                                "birthYear": 1992
+                              },
+                              "paymentStatus": "ACCEPTED"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "If an unexpected error occurred",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/IErrorCodeResponse"
+                      },
+                      "examples": {
+                        "Example 1": {
+                          "value": {
+                            "errorKey": "general:internal:unexpected",
+                            "errorMessage": "An unexpected error occurred"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "description": "Books asynchronously an order.",
+              "security": [
+                {
+                  "authentication": [
+                    "admin",
+                    "bookPartner"
+                  ]
+                }
+              ],
+              "parameters": [
                 {
                   "in": "path",
-                  "name": "filename",
+                  "name": "orderId",
                   "required": true,
                   "schema": {
                     "type": "string"
-                  }
+                  },
+                  "example": "8bc8557793fe4447"
                 }
               ]
             }

@@ -5,14 +5,14 @@
  */
 export default {
   "title": "Tictactrip Documentation",
-  "tagline": "Nodi is cool",
-  "url": "https://your-docusaurus-test-site.com",
+  "tagline": "Tagline",
+  "url": "https://api.comparatrip.eu/",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
+  "organizationName": "tictactrip",
+  "projectName": "Documentation",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -26,8 +26,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/swann/tictactrip/documentation/sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "sidebarPath": "/Users/swann/tictactrip/documentation/sidebars.js"
         },
         "blog": {
           "showReadingTime": true,
@@ -43,7 +42,7 @@ export default {
       {
         "specs": [
           {
-            "spec": "./static/openapi.yaml",
+            "spec": "./static/swagger.json",
             "route": "/api/"
           }
         ],
@@ -67,8 +66,8 @@ export default {
           "label": "Docs"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
+          "to": "/api",
+          "label": "Api definition",
           "position": "left"
         },
         {
@@ -81,48 +80,8 @@ export default {
     },
     "footer": {
       "style": "dark",
-      "links": [
-        {
-          "title": "Docs",
-          "items": [
-            {
-              "label": "Tutorial",
-              "to": "/docs/intro"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
-            }
-          ]
-        },
-        {
-          "title": "More",
-          "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
-            {
-              "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
-            }
-          ]
-        }
-      ],
-      "copyright": "Copyright © 2022 My Project, Inc. Built with Docusaurus."
+      "copyright": "Copyright © 2022 Tictactrip, Inc.",
+      "links": []
     },
     "prism": {
       "theme": {

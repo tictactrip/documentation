@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Reference/stop-group-definition",
+  "id": "Reference/stop-group-definition",
+  "title": "Stop Group definition",
+  "description": "Docusaurus can manage multiple versions of your docs.",
+  "source": "@site/docs/Reference/stop-group-definition.md",
+  "sourceDirName": "Reference",
+  "slug": "/Reference/stop-group-definition",
+  "permalink": "/docs/Reference/stop-group-definition",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Reference",
+    "permalink": "/docs/category/reference"
+  },
+  "next": {
+    "title": "Stop Cluster definition",
+    "permalink": "/docs/Reference/stop-cluster"
+  }
+}

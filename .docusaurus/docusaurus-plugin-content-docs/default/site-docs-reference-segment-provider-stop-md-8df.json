@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Reference/segment-provider-stop",
+  "id": "Reference/segment-provider-stop",
+  "title": "Segment provider stop",
+  "description": "Definition",
+  "source": "@site/docs/Reference/segment-provider-stop.md",
+  "sourceDirName": "Reference",
+  "slug": "/Reference/segment-provider-stop",
+  "permalink": "/docs/Reference/segment-provider-stop",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Segment provider",
+    "permalink": "/docs/Reference/segment-provider"
+  },
+  "next": {
+    "title": "Stop Group",
+    "permalink": "/docs/Reference/stop-group"
+  }
+}

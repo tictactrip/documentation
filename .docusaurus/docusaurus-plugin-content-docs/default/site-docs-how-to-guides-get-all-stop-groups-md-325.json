@@ -1,0 +1,26 @@
+{
+  "unversionedId": "How-to Guides/get-all-stop-groups",
+  "id": "How-to Guides/get-all-stop-groups",
+  "title": "Get all stop groups",
+  "description": "Response body example",
+  "source": "@site/docs/How-to Guides/get-all-stop-groups.md",
+  "sourceDirName": "How-to Guides",
+  "slug": "/How-to Guides/get-all-stop-groups",
+  "permalink": "/docs/How-to Guides/get-all-stop-groups",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Get all stop clusters",
+    "permalink": "/docs/How-to Guides/get-all-stop-clusters"
+  },
+  "next": {
+    "title": "Reference",
+    "permalink": "/docs/category/reference"
+  }
+}

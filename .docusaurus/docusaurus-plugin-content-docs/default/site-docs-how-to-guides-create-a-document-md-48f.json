@@ -8,7 +8,6 @@
   "slug": "/How-to Guides/create-a-document",
   "permalink": "/docs/How-to Guides/create-a-document",
   "draft": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/How-to Guides/create-a-document.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -17,8 +16,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Create a Page",
-    "permalink": "/docs/How-to Guides/create-a-page"
+    "title": "Get all stop clusters",
+    "permalink": "/docs/How-to Guides/get-all-stop-groups"
   },
   "next": {
     "title": "Create a Blog Post",

@@ -8,7 +8,6 @@
   "slug": "/Reference/translate-your-site",
   "permalink": "/docs/Reference/translate-your-site",
   "draft": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Reference/translate-your-site.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -17,11 +16,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Manage Docs Versions",
-    "permalink": "/docs/Reference/manage-docs-versions"
+    "title": "Segment",
+    "permalink": "/docs/Reference/segment"
   },
   "next": {
-    "title": "Hello from Docusaurus",
-    "permalink": "/docs/greeting"
+    "title": "Segment provider",
+    "permalink": "/docs/Reference/segment-provider"
   }
 }

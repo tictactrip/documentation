@@ -4,12 +4,12 @@
   "permalink": "/docs/category/reference",
   "navigation": {
     "previous": {
-      "title": "Congratulations!",
-      "permalink": "/docs/How-to Guides/congratulations"
+      "title": "Get all stop groups",
+      "permalink": "/docs/How-to Guides/get-all-stop-groups"
     },
     "next": {
-      "title": "Manage Docs Versions",
-      "permalink": "/docs/Reference/manage-docs-versions"
+      "title": "Segment",
+      "permalink": "/docs/Reference/segment"
     }
   }
 }
