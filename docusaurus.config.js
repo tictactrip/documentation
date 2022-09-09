@@ -86,7 +86,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/api', label: 'Api definition', position: 'left'},
+          {to: '/api', label: 'Api Definition', position: 'left'},
           {
             href: 'https://github.com/tictactrip/documentation',
             label: 'GitHub',
