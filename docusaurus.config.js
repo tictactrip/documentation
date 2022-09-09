@@ -88,7 +88,7 @@ const config = {
           },
           {to: '/api', label: 'Api definition', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/tictactrip/documentation',
             label: 'GitHub',
             position: 'right',
           },
