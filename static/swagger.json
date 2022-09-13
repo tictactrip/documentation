@@ -5333,6 +5333,42 @@
 							}
 						}
 					},
+					"400": {
+						"description": "Bad request",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IErrorCodeResponse"
+								},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"errorKey": "string",
+											"errorMessage": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "If the stopCluster is not found",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IErrorCodeResponse"
+								},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"errorKey": "partnersApi:client:stopClusterNotFound",
+											"errorMessage": "This StopCluster could not be found"
+										}
+									}
+								}
+							}
+						}
+					},
 					"500": {
 						"description": "If an unexpected error occurred",
 						"content": {
@@ -6263,7 +6299,7 @@
 						}
 					},
 					"404": {
-						"description": "If the customer information for this cart are not found",
+						"description": "Not found",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -6272,8 +6308,8 @@
 								"examples": {
 									"Example 1": {
 										"value": {
-											"errorKey": "carts:client:cartCustomerNotFound",
-											"errorMessage": "Customer information for this cart were not found"
+											"errorKey": "string",
+											"errorMessage": "string"
 										}
 									}
 								}
@@ -6533,6 +6569,24 @@
 												},
 												"paymentStatus": "ACCEPTED"
 											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "Not found",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IErrorCodeResponse"
+								},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"errorKey": "string",
+											"errorMessage": "string"
 										}
 									}
 								}
