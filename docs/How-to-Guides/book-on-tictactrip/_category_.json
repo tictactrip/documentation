@@ -1,0 +1,8 @@
+{
+  "label": "Book on Tictactrip",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "This guide aims to show you step by step how to do a booking on Tictactrip."
+  }
+}

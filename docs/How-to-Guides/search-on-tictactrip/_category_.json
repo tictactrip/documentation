@@ -1,0 +1,8 @@
+{
+  "label": "Search on Tictactrip",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "This guide aims to show you step by step how to do a search on Tictactrip."
+  }
+}
