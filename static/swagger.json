@@ -5755,7 +5755,7 @@
 						}
 					}
 				},
-				"description": "\nUpdates a cart with the provided informations. A price lookup is done once the cart is updated.",
+				"description": "\nUpdates a cart with the provided informations. A price lookup is done everytime a cart is patched.\nKeep in mind that patching a cart with an empty payload WILL NOT reset the cart's data, and will trigger a price lookup with the saved cart's data.",
 				"security": [
 					{
 						"authentication": [
@@ -5974,7 +5974,7 @@
 						}
 					}
 				},
-				"description": "Creates a cart. Has to contain at least an outbound trip id for it to work.",
+				"description": "Creates a cart. Has to contain at least an outbound trip id and minimal passenger information for it to work.",
 				"security": [
 					{
 						"authentication": [
@@ -6612,7 +6612,7 @@
 						}
 					}
 				},
-				"description": "Books asynchronously an order.",
+				"description": "Triggers an asynchronous booking process.",
 				"security": [
 					{
 						"authentication": [
