@@ -76,7 +76,7 @@ const config = {
     ({
       navbar: {
         logo: {
-          alt: 'My Site Logo',
+          alt: 'TTT Site Logo',
           src: 'img/logoTextBlack.svg',
         },
         items: [
