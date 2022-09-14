@@ -689,7 +689,6 @@
 								}
 							},
 							"required": [
-								"code",
 								"id"
 							],
 							"type": "object"
@@ -4788,7 +4787,7 @@
 	},
 	"info": {
 		"title": "@tictactrip/api",
-		"version": "2.533.0",
+		"version": "2.533.1",
 		"description": "Tictactrip's API service",
 		"license": {
 			"name": "UNLICENSED"
@@ -6290,8 +6289,7 @@
 											},
 											"priceCentsDiff": 0,
 											"isAvailable": true,
-											"expiresAt": "2022-09-09T13:39:15.533Z",
-											"paylineToken": null
+											"expiresAt": "2022-09-09T13:39:15.533Z"
 										}
 									}
 								}
