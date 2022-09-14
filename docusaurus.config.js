@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tictactrip Documentation',
+  title: 'Documentation',
   tagline: 'Tagline',
   url: 'https://api.comparatrip.eu/',
   baseUrl: '/',
@@ -44,10 +44,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+              'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-RQEHKSPQ6Z',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -68,46 +72,45 @@ const config = {
         },
       },
     ],
-
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        logo: {
-          alt: 'TTT Site Logo',
-          src: 'img/logoTextBlack.svg',
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+      ({
+        navbar: {
+          logo: {
+            alt: 'Tictactrip logo',
+            src: 'img/logoTextBlack.svg',
+          },
+          items: [
+            {
+              type: 'doc',
+              docId: 'intro',
+              position: 'left',
+              label: 'Docs',
+            },
+            {to: '/api', label: 'Api', position: 'left'},
+            {
+              href: 'https://github.com/tictactrip/documentation',
+              label: 'GitHub',
+              position: 'right',
+            },
+          ],
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Docs',
-          },
-          {to: '/api', label: 'Api Definition', position: 'left'},
-          {
-            href: 'https://github.com/tictactrip/documentation',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Tictactrip, Inc.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
-      },
-    }),
+        footer: {
+          style: 'dark',
+          copyright: `Copyright © ${new Date().getFullYear()} Tictactrip, Inc.`,
+        },
+        prism: {
+          theme: lightCodeTheme,
+          darkTheme: darkCodeTheme,
+        },
+        colorMode: {
+          defaultMode: 'light',
+          disableSwitch: true,
+          respectPrefersColorScheme: false,
+        },
+      }),
 };
 
 module.exports = config;
