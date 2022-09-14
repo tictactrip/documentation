@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Tictactrip Documentation',
-  tagline: 'Réservez trains, bus et leurs combinaisons',
+  tagline: 'Book trains, buses and their combination',
   url: 'https://api.comparatrip.eu/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
