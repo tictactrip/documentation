@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tictactrip Documentation',
+  title: 'Documentation',
   tagline: 'Tagline',
   url: 'https://api.comparatrip.eu/',
   baseUrl: '/',
@@ -79,7 +79,7 @@ const config = {
       ({
         navbar: {
           logo: {
-            alt: 'TTT Site Logo',
+            alt: 'Tictactrip logo',
             src: 'img/logoTextBlack.svg',
           },
           items: [
@@ -89,7 +89,7 @@ const config = {
               position: 'left',
               label: 'Docs',
             },
-            {to: '/api', label: 'Api Definition', position: 'left'},
+            {to: '/api', label: 'Api', position: 'left'},
             {
               href: 'https://github.com/tictactrip/documentation',
               label: 'GitHub',
