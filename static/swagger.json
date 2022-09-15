@@ -4787,7 +4787,7 @@
 	},
 	"info": {
 		"title": "@tictactrip/api",
-		"version": "2.533.1",
+		"version": "2.535.0",
 		"description": "Tictactrip's API service",
 		"license": {
 			"name": "UNLICENSED"
@@ -4800,82 +4800,6 @@
 	},
 	"openapi": "3.0.0",
 	"paths": {
-		"/orderETickets/{orderId}/download/{filename}": {
-			"get": {
-				"operationId": "DownloadTicket",
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "string",
-									"format": "byte"
-								}
-							}
-						}
-					},
-					"404": {
-						"description": "If no order is found",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/IErrorCodeResponse"
-								},
-								"examples": {
-									"Example 1": {
-										"value": {
-											"errorKey": "orderEtickets:client:orderNotFound",
-											"errorMessage": "Order was not found"
-										}
-									}
-								}
-							}
-						}
-					},
-					"500": {
-						"description": "If an unexpected error occurred",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/IErrorCodeResponse"
-								},
-								"examples": {
-									"Example 1": {
-										"value": {
-											"errorKey": "general:internal:unexpected",
-											"errorMessage": "An unexpected error occurred"
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				"description": "Download an order Eticket and gives the name provided to the file.",
-				"security": [],
-				"parameters": [
-					{
-						"in": "path",
-						"name": "orderId",
-						"required": true,
-						"schema": {
-							"type": "string"
-						},
-						"example": "8bc8557793fe4447"
-					},
-					{
-						"in": "path",
-						"name": "filename",
-						"required": true,
-						"schema": {
-							"type": "string"
-						},
-						"example": "myTicket"
-					}
-				]
-			}
-		},
 		"/v2/stopGroups": {
 			"get": {
 				"operationId": "GetAllStopGroups",
@@ -6289,7 +6213,8 @@
 											},
 											"priceCentsDiff": 0,
 											"isAvailable": true,
-											"expiresAt": "2022-09-09T13:39:15.533Z"
+											"expiresAt": "2022-09-09T13:39:15.533Z",
+											"paylineToken": null
 										}
 									}
 								}
@@ -6628,6 +6553,90 @@
 							"type": "string"
 						},
 						"example": "8bc8557793fe4447"
+					}
+				]
+			}
+		},
+		"/booking/v3/orders/{orderId}/ticket": {
+			"get": {
+				"operationId": "DownloadTicket",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string",
+									"format": "byte"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "If no order is found",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IErrorCodeResponse"
+								},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"errorKey": "orderEtickets:client:orderNotFound",
+											"errorMessage": "Order was not found"
+										}
+									}
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "If an unexpected error occurred",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IErrorCodeResponse"
+								},
+								"examples": {
+									"Example 1": {
+										"value": {
+											"errorKey": "general:internal:unexpected",
+											"errorMessage": "An unexpected error occurred"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"description": "Download an order Eticket and gives the name provided to the file.",
+				"security": [
+					{
+						"authentication": [
+							"admin",
+							"bookPartner"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "orderId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"example": "8bc8557793fe4447"
+					},
+					{
+						"in": "query",
+						"name": "filename",
+						"required": false,
+						"schema": {
+							"default": "ticket",
+							"type": "string"
+						},
+						"example": "myTicketName"
 					}
 				]
 			}
