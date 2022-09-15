@@ -311,7 +311,8 @@ As the booking is done asynchronously, you have to call this endpoint to know if
 If the `orderStatus` is set to `SUCESSS`, then the booking went well.
 
 ```bash
-curl --location --request GET 'https://api.tictactrip.eu/booking/orders/fde73760a5354d18'
+curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18' \
+--header 'Authorization: Bearer token'
 ```
 
 ### Response body example
@@ -361,7 +362,8 @@ Once you have validated that the booking was successful by **[getting the order]
 You must pass the id of the order and the file name you want to give to the file as a parameters in the url.
 
 ```bash
-curl --location --request GET 'https://api.tictactrip.eu/orderEtickets/fde73760a5354d18/download/ticketName'
+curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18/ticket?filename=ticketName' \
+--header 'Authorization: Bearer token'
 ```
 
 ### Response body example
