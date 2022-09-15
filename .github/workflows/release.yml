@@ -14,5 +14,5 @@ jobs:
       - uses: bahmutov/npm-install@v1
       - run: git remote set-url origin --add https://$NODI_BOT_TOKEN@github.com/nodi-bot/documentation
         env:
-          NODI_BOT_TOKEN: ${{ secrets.$NODI_BOT_TOKEN }}
+          NODI_BOT_TOKEN: ${{ secrets.NODI_BOT_TOKEN }}
       - run: git push
