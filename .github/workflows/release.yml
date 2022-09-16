@@ -1,5 +1,7 @@
 name: Release
 on:
+  schedule:
+    - cron: '0 0 * * *'
   push:
     branches:
       - main
@@ -8,6 +10,7 @@ jobs:
   release:
     name: release
     runs-on: ubuntu-latest
+    if: github.repository == 'tictactrip/documentation'
     steps:
       - uses: actions/checkout@v2
         with:
