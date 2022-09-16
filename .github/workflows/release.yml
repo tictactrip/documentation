@@ -3,16 +3,17 @@ on:
   push:
     branches:
       - main
+      - release
 
 jobs:
   release:
     name: release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - uses: bahmutov/npm-install@v1
-      - run: git remote set-url origin --add https://$NODI_BOT_TOKEN@github.com/nodi-bot/documentation
-        env:
-          NODI_BOT_TOKEN: ${{ secrets.NODI_BOT_TOKEN }}
-      - run: git push
+      - name: Mirroring
+        uses: pixta-dev/repository-mirroring-action@v1.1.0
+        with:
+          target_repo_url:
+            git@github.com:nodi-bot/documentation.git
+          ssh_private_key:
+            ${{ secrets.MIRROR_SSH_PRIVATE_KEY }}
