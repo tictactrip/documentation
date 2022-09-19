@@ -8,7 +8,7 @@ Once you have validated that the booking was successful by **[getting the order]
 You must pass the id of the order and the file name you want to give to the file as a parameters in the url.
 
 ```
-curl --location --request GET 'https://api.comparatrip.eu/orderEtickets/fde73760a5354d18/download/ticketName'
+curl --location --request GET 'https://api.tictactrip.eu/orderEtickets/fde73760a5354d18/download/ticketName'
 ```
 
 ## Response body example
