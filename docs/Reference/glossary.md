@@ -160,7 +160,7 @@ This combination of **[Segments](/docs/Reference/glossary#segment)** constitutes
 }
 ```
 
-## Stop Group
+## StopGroup
 
 ### Definition
 A **stopGroup** is a set of stations. In "real world" semantics, a **stopGroup** matches a physical station, or several kinds of stations in the same real world location.
@@ -185,10 +185,10 @@ A **stopGroup** "Paris Bercy" has two stations being the "train station" and the
 }
 ```
 
-## Stop Cluster
+## StopCluster
 
 ### Definition
-A **stopCluster** is a collection of **[stopGroups](/docs/Reference/glossary#stop-group)**. It corresponds to a user intent. It is often illustrated by a city, but it can be anything the user is supposed to be looking for.
+A **stopCluster** is a collection of **[stopGroups](/docs/Reference/glossary#stopgroup)**. It corresponds to a user intent. It is often illustrated by a city, but it can be anything the user is supposed to be looking for.
 
 
 ### Example

@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## Get origin and destination ids
 
-In order to search on **[Tictactrip](https://www.tictactrip.eu/)** you will need two **[stopCluster](/docs/Reference/glossary#stop-cluster)** ids, one for the origin and one for the destination.  
+In order to search on **[Tictactrip](https://www.tictactrip.eu/)** you will need two **[stopCluster](/docs/Reference/glossary#stopcluster)** IDs, one for the origin and one for the destination.  
 For example `c|FRpralvano@u0hf0` and `c|FRmoutiers@u0hdu`. You can notice that they are always prefixed by a "c" for "cluster".
 
 ```bash
@@ -50,9 +50,14 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
 ]
 ```
 
+:::note
+
+Usually, our partners perform a mapping between their internal station IDs and our **[stopGroups](/docs/Reference/glossary#stopgroup)**. When they want to perform a search on a **[stopGroup](/docs/Reference/glossary#stopgroup)**, they retrieve the **[stopCluster](/docs/Reference/glossary#stopcluster)** previously associated in their mapping and execute their search requests with this **[stopCluster(s)](/docs/Reference/glossary#stopcluster)**.
+
+:::
 :::tip
 
-Check the definition of a **[stopCluster](/docs/Reference/glossary#stop-cluster)** and the full description of this **[request](/api#operation/GetAllStopClusters)**.
+Check the definition of a **[stopCluster](/docs/Reference/glossary#stopcluster)** and the full description of this **[request](/api#operation/GetAllStopClusters)**.
 
 :::
 
