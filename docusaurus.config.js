@@ -62,7 +62,7 @@ const config = {
         // Plugin Options for loading OpenAPI files
         specs: [
           {
-            spec: './static/swagger.json',
+            spec: 'https://api.tictactrip.eu/documentation',
             route: '/api/',
           },
         ],
