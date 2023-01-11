@@ -5,7 +5,7 @@ sidebar_position: 5
 # Get an order
 
 As the booking is done asynchronously, you have to call this endpoint to know if the booking was successful or not.  
-If the `orderStatus` is set to `SUCESSS`, then the booking went well.
+If the `orderStatus` is set to `SUCCESS`, then the booking went well.
 
 ```
 curl --location --request GET 'https://api.tictactrip.eu/booking/orders/fde73760a5354d18'
@@ -44,9 +44,7 @@ curl --location --request GET 'https://api.tictactrip.eu/booking/orders/fde73760
         "originOffset": "+0200",
         "destinationOffset": "+0200",
         "durationMinutes": 73,
-        "companies": [
-          "Altibus"
-        ],
+        "companies": ["Altibus"],
         "segments": [
           {
             "id": "406338",
@@ -111,7 +109,6 @@ curl --location --request GET 'https://api.tictactrip.eu/booking/orders/fde73760
     "paymentStatus": "ACCEPTED"
   }
 }
-
 ```
 
 :::tip

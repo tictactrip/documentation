@@ -4,17 +4,16 @@ sidebar_position: 2
 
 # Trip
 
-
 ## Definition
 
-A **trip** represent a travel, typically there are two trips for a round trip and a single one for a one-way. A **trip** consist of several **[Segments](./segment.md)**.
-
+A **trip** represents a travel, typically there are two trips for a round trip and a single one for a one-way. A **trip** may consist of several **[Segments](./segment.md)**.
 
 ## Example
 
 I make a trip from Paris to Brussels, it contains two **[Segments](./segment.md)**, Paris - Lille by Ouigo then Lille - Brussels by Flixbus.
 
-This combination of **[Segments](./segment.md)** constitutes a **trip**. 
+This combination of **[Segments](./segment.md)** constitutes a **trip**.
+
 ```json
 {
   "trips": {
@@ -41,10 +40,7 @@ This combination of **[Segments](./segment.md)** constitutes a **trip**.
       "departureUTC": 1662722580,
       "arrivalUTC": 1662739200,
       "durationMinutes": 277,
-      "companies": [
-        "OUIGO Grande vitesse",
-        "Flixbus"
-      ],
+      "companies": ["OUIGO Grande vitesse", "Flixbus"],
       "segments": [
         {
           "id": "1764044",

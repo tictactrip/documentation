@@ -6,6 +6,7 @@ sidebar_position: 3
 
 The creation of an order is done from a cart, so you will not be able to create an order if you have not **[created](./create-cart)** and **[updated](./update-cart)** the cart before.  
 You must pass the `cartId` in the body of the request.
+
 ```
 curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders' \
 --header 'Authorization: Bearer token' \
@@ -45,9 +46,7 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders' \
         "originOffset": "+0200",
         "destinationOffset": "+0200",
         "durationMinutes": 73,
-        "companies": [
-          "Altibus"
-        ],
+        "companies": ["Altibus"],
         "segments": [
           {
             "id": "406325",
@@ -114,7 +113,6 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders' \
   "isAvailable": true,
   "expiresAt": "2022-09-13T14:14:06.070Z"
 }
-
 ```
 
 :::tip

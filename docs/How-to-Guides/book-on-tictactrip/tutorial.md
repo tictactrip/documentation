@@ -58,9 +58,7 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/carts' \
         "departureUTC": 1663561920,
         "arrivalUTC": 1663566300,
         "durationMinutes": 73,
-        "companies": [
-          "Altibus"
-        ],
+        "companies": ["Altibus"],
         "segments": [
           {
             "id": "1764105",
@@ -245,7 +243,6 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders' \
   "isAvailable": true,
   "expiresAt": "2022-09-13T14:14:06.070Z"
 }
-
 ```
 
 :::tip
@@ -256,7 +253,7 @@ Check the full description of this **[request](/api#operation/CreateOrder)**.
 
 :::info
 
-When creating an order an option is placed on the ticket(s).
+When creating an order an option is placed on the ticket(s). Depending of the company selling the ticket(s), the time at which the availability and price is guaranted may vary.
 
 :::
 
@@ -296,7 +293,6 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders/fde7
     "paymentStatus": "ACCEPTED"
   }
 }
-
 ```
 
 :::tip
@@ -308,7 +304,7 @@ Check the full description of this **[request](/api#operation/CreateBook)**.
 ## Get an order
 
 As the booking is done asynchronously, you have to call this endpoint to know if the booking was successful or not.  
-If the `orderStatus` is set to `SUCESSS`, then the booking went well.
+If the `orderStatus` is set to `SUCCESS`, then the booking went well.
 
 ```bash
 curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18' \
@@ -341,7 +337,6 @@ curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73
     "paymentStatus": "ACCEPTED"
   }
 }
-
 ```
 
 :::tip
@@ -359,7 +354,7 @@ A booking can be long, it may be necessary to call this endpoint several times.
 ## Download tickets
 
 Once you have validated that the booking was successful by **[getting the order](/docs/How-to-Guides/book-on-tictactrip/tutorial#get-an-order)** you can download the tickets of the order.
-You must pass the id of the order and the file name you want to give to the file as a parameters in the url.
+You must pass the id of the order and the file name you want to give to the file as a parameter in the url.
 
 ```bash
 curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18/ticket?filename=ticketName' \
@@ -378,6 +373,6 @@ Check the full description of this **[request](/api#operation/DownloadTicket)**.
 
 :::info
 
-If there are several tickets in the order they will all be in the same pdf.
+If there are several tickets in the order, they will all be in the same pdf.
 
 :::
