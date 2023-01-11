@@ -6,7 +6,6 @@ sidebar_position: 1
 
 ## Segment
 
-
 ### Definition
 
 A Segment has an origin (city and station), a destination (city and station), a price, a date, hours.
@@ -52,17 +51,16 @@ Indeed we have a city (Paris), a station (Paris Gare De Lyon), a date (september
 
 ## Trip
 
-
 ### Definition
 
-A **trip** represent a travel, typically there are two trips for a round trip and a single one for a one-way. A **trip** consist of several **[Segments](/docs/Reference/glossary#segment)**.
-
+A **trip** represents a travel, typically there are two trips for a round trip and a single one for a one-way. A **trip** consist of several **[Segments](/docs/Reference/glossary#segment)**.
 
 ### Example
 
 I make a trip from Paris to Brussels, it contains two **[Segments](/docs/Reference/glossary#segment)**, Paris - Lille by Ouigo then Lille - Brussels by Flixbus.
 
 This combination of **[Segments](/docs/Reference/glossary#segment)** constitutes a **trip**.
+
 ```json
 {
   "trips": {
@@ -89,10 +87,7 @@ This combination of **[Segments](/docs/Reference/glossary#segment)** constitutes
       "departureUTC": 1662722580,
       "arrivalUTC": 1662739200,
       "durationMinutes": 277,
-      "companies": [
-        "OUIGO Grande vitesse",
-        "Flixbus"
-      ],
+      "companies": ["OUIGO Grande vitesse", "Flixbus"],
       "segments": [
         {
           "id": "1764044",
@@ -163,10 +158,11 @@ This combination of **[Segments](/docs/Reference/glossary#segment)** constitutes
 ## StopGroup
 
 ### Definition
+
 A **stopGroup** is a set of stations. In "real world" semantics, a **stopGroup** matches a physical station, or several kinds of stations in the same real world location.
 
-
 ### Example
+
 A **stopGroup** "Paris Bercy" has two stations being the "train station" and the "bus station", but in practice, the user only wants to know about "Paris Bercy" as a transportation hub. Thus, we group them under a single entity named **stopGroup**.
 
 ```json
@@ -178,21 +174,20 @@ A **stopGroup** "Paris Bercy" has two stations being the "train station" and the
   "country": "fr",
   "latitude": 48.8393,
   "longitude": 2.3829,
-  "transportTypes": [
-    "bus",
-    "train"
-  ]
+  "transportTypes": ["bus", "train"]
 }
 ```
 
 ## StopCluster
 
 ### Definition
+
 A **stopCluster** is a collection of **[stopGroups](/docs/Reference/glossary#stopgroup)**. It corresponds to a user intent. It is often illustrated by a city, but it can be anything the user is supposed to be looking for.
 
-
 ### Example
+
 "Paris" is a **stopCluster**.
+
 ```json
 {
   "id": "c|FRparis___@u09tv",
@@ -203,4 +198,4 @@ A **stopCluster** is a collection of **[stopGroups](/docs/Reference/glossary#sto
   "latitude": 48.8566,
   "longitude": 2.3515
 }
-``` 
+```
