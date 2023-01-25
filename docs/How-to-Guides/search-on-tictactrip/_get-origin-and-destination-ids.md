@@ -7,7 +7,6 @@ sidebar_position: 1
 In order to search on **[Tictactrip](https://www.tictactrip.eu/)** you will need two **[stopCluster](../../Reference/stop-cluster.md)** ids, one for the origin and one for the destination.  
 For example `c|FRpralvano@u0hf0` and `c|FRmoutiers@u0hdu`. You can notice that they are always prefixed by a "c" for "cluster".
 
-
 ```
 curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
 --header 'Authorization: Bearer token'
@@ -23,18 +22,20 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
     "name": "Pralognan La Vanoise",
     "city": "Pralognan La Vanoise",
     "region": "Auvergne-Rhône-Alpes",
-    "country": "fr",
+    "country": "FR",
     "latitude": 45.3819,
     "longitude": 6.72121
+    //...
   },
   {
     "id": "c|FRmoutiers@u0hdu",
     "name": "Moûtiers",
     "city": "Moûtiers",
     "region": "Auvergne-Rhône-Alpes",
-    "country": "fr",
+    "country": "FR",
     "latitude": 45.4852,
     "longitude": 6.5291
+    //...
   },
   {
     "id": "c|PTvilareal@ez66z",
@@ -44,6 +45,7 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
     "country": "pt",
     "latitude": 41.2979376,
     "longitude": -7.75298965523
+    //...
   }
   //...
 ]
