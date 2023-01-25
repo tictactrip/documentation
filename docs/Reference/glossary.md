@@ -171,10 +171,11 @@ A **stopGroup** "Paris Bercy" has two stations being the "train station" and the
   "name": "Paris Bercy ",
   "city": "Paris",
   "region": "Île-de-France",
-  "country": "fr",
+  "country": "FR",
   "latitude": 48.8393,
   "longitude": 2.3829,
   "transportTypes": ["bus", "train"]
+  //...
 }
 ```
 
@@ -194,8 +195,9 @@ A **stopCluster** is a collection of **[stopGroups](/docs/Reference/glossary#sto
   "name": "Paris",
   "city": "Paris",
   "region": "Île-de-France",
-  "country": "fr",
+  "country": "FR",
   "latitude": 48.8566,
   "longitude": 2.3515
+  //...
 }
 ```

@@ -4,8 +4,6 @@ sidebar_position: 3
 
 # Get all stop groups
 
-
-
 ```
 curl --location --request GET 'https://api.tictactrip.eu/v2/stopGroups' \
 --header 'Authorization: Bearer token'
@@ -21,39 +19,33 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopGroups' \
     "name": "Paris Montparnasse 1 Et 2",
     "city": "Paris",
     "region": "Île-de-France",
-    "country": "fr",
+    "country": "FR",
     "latitude": 48.8409,
     "longitude": 2.3205,
-    "transportTypes": [
-      "bus",
-      "train"
-    ]
+    "transportTypes": ["bus", "train"]
+    //...
   },
   {
     "id": "g|FRpamo3va_@u09tug",
     "name": "Paris Montparnasse 3 Vaugirard",
     "city": "Paris",
     "region": "Île-de-France",
-    "country": "fr",
+    "country": "FR",
     "latitude": 48.8409,
     "longitude": 2.3205,
-    "transportTypes": [
-      "bus",
-      "train"
-    ]
+    "transportTypes": ["bus", "train"]
+    //...
   },
   {
     "id": "g|FRparsaila@u09whc",
     "name": "Paris Saint-Lazare",
     "city": "Paris",
     "region": "Île-de-France",
-    "country": "fr",
+    "country": "FR",
     "latitude": 48.8756,
     "longitude": 2.3254,
-    "transportTypes": [
-      "bus",
-      "train"
-    ]
+    "transportTypes": ["bus", "train"]
+    //...
   }
   //...
 ]

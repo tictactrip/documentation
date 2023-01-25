@@ -2,7 +2,6 @@
 sidebar_position: 1
 ---
 
-
 # Tutorial
 
 ## Get origin and destination ids
@@ -14,6 +13,7 @@ For example `c|FRpralvano@u0hf0` and `c|FRmoutiers@u0hdu`. You can notice that t
 curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
 --header 'Authorization: Bearer token'
 ```
+
 ### Response body example
 
 ```json
@@ -24,27 +24,30 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
     "name": "Pralognan La Vanoise",
     "city": "Pralognan La Vanoise",
     "region": "Auvergne-Rhône-Alpes",
-    "country": "fr",
+    "country": "FR",
     "latitude": 45.3819,
     "longitude": 6.72121
+    //...
   },
   {
     "id": "c|FRmoutiers@u0hdu",
     "name": "Moûtiers",
     "city": "Moûtiers",
     "region": "Auvergne-Rhône-Alpes",
-    "country": "fr",
+    "country": "FR",
     "latitude": 45.4852,
     "longitude": 6.5291
+    //...
   },
   {
     "id": "c|PTvilareal@ez66z",
     "name": "Vila Real",
     "city": "Vila Real",
     "region": "Norte",
-    "country": "pt",
+    "country": "PT",
     "latitude": 41.2979376,
     "longitude": -7.75298965523
+    //...
   }
   //...
 ]
@@ -176,7 +179,7 @@ curl --location --request POST 'https://api.tictactrip.eu/v2/results' \
           "co2g": 669
         }
       ]
-    },
+    }
     //...
   }
 }
