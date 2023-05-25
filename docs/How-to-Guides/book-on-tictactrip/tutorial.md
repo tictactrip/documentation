@@ -203,6 +203,220 @@ A price lookup is done everytime a cart is updated.
 
 :::
 
+## Fare selection
+
+:::caution
+
+Fare selection is only available for Eurostar Thalys and SNCF brands on applicable journeys.
+
+:::
+
+When a cart is patched, all the fares available for each segment are stored in the alternativeSegments object. By default the lowest price is always selected.
+
+You can choose your **fare**, segment by segment by mapping each `segment id` to its `fare id` in the **alternativeSegments** object.
+
+The following example is based on this first patch response:
+
+![](../../../static/img/fare-sample.png)
+
+Let's say you want to book your first segment in first class, and your last one in second class. You must do the following request:
+
+
+```
+curl --location --request PATCH 'https://api.tictactrip.eu/booking/v3/carts/bf58e6091bd04eb2' \
+--header 'Authorization: Bearer token' \
+--header 'Content-Type: application/json' \
+--data-raw '
+{
+    "segmentAlternatives": {
+        123: "6ad76a7aef53",
+        ...
+        127: "1068928c"
+    }
+}'
+```
+
+:::caution
+
+A price lookup is done everytime a cart is updated.
+
+:::
+
+### Response body example
+
+```json
+{
+  "cart": {
+    "id": "e8fcd9aec36c489d",
+    "partnerId": "",
+    "partnerExternalId": null,
+    "paidPrice": 14200,
+    "rawPrice": 14200,
+    "totalPrice": 14200,
+    "trips": {
+      "outboundTrip": {
+        "id": "1523320",
+        "uuid": "c4c55711-2f93-4a21-b42a-87ab40f14833",
+        "origin": {
+          "id": 628,
+          "city": "Paris",
+          "country": "France",
+          "station": "Paris Gare de Lyon"
+        },
+        "destination": {
+          "id": 485,
+          "city": "Lyon",
+          "country": "France",
+          "station": "Lyon Part Dieu"
+        },
+        "originOffset": "+0200",
+        "destinationOffset": "+0200",
+        "priceCents": 14200,
+        "feeCents": 0,
+        "paidPrice": 14200,
+        "departureUTC": 1686590640,
+        "arrivalUTC": 1686597720,
+        "durationMinutes": 118,
+        "companies": [
+          "TGV Inoui"
+        ],
+        "segments": [
+          {
+            "id": "2325470",
+            "company": "TGV Inoui",
+            "mean": "train",
+            "origin": {
+              "city": "Paris",
+              "country": "France",
+              "station": "Paris Gare de Lyon",
+              "lat": 48.8566,
+              "long": 2.3515
+            },
+            "destination": {
+              "city": "Lyon",
+              "country": "France",
+              "station": "Lyon Part Dieu",
+              "lat": 45.764043,
+              "long": 4.835659
+            },
+            "isBookable": true,
+            "priceCents": 14200,
+            "feeCents": 0,
+            "includedProviderFeeCents": 0,
+            "departureUTC": 1686590640,
+            "arrivalUTC": 1686597720,
+            "originOffset": "+0200",
+            "destinationOffset": "+0200",
+            "durationMinutes": 118,
+            "redirectionLink": null,
+            "bookingClass": "1ère classe",
+            "fareName": "BUSINESS PREMIERE",
+            "conditions": [
+              "Echange et remboursement sans frais jusqu'à 30 min après départ.",
+              "Dès 30 min avant départ, billet échangeable 2 fois max (même jour, même trajet) et non remboursable après 1 échange.",
+              "Si emprunt d’un autre train, échange obligatoire."
+            ],
+            "vehicleIdentifier": "6669"
+          }
+        ],
+        "mean": "TRAIN",
+        "co2g": 150
+      }
+    },
+    "passengers": [
+      {
+        "id": 1880413,
+        "lastName": "Doe",
+        "firstName": "John",
+        "title": "MR",
+        "isCustomer": true,
+        "discountCardId": null,
+        "category": "youths",
+        "discountCards": [],
+        "age": 24,
+        "birthdate": "1999-01-01T00:00:00.000Z"
+      }
+    ],
+    "customer": {
+      "mail": "john.doe@tictactrip.eu",
+      "title": "MR",
+      "lastName": "Doe",
+      "firstName": "John",
+      "birthdate": "1999-01-01T00:00:00.000Z"
+    }
+  },
+  "priceCentsDiff": 0,
+  "isAvailable": true,
+  "segmentAlternatives": {
+    "2325470": {
+      "e1429d43-91a5-47ac-824a-1630f39cf076": {
+        "id": "e1429d43-91a5-47ac-824a-1630f39cf076",
+        "arrivalOffset": "+0200",
+        "arrivalUnixUtc": 1686597720,
+        "bookingClass": "2_ND_CLASS",
+        "brandName": "TGV INOUI",
+        "co2g": 150,
+        "conditions": [
+          "Billet échangeable (ajustement au tarif en vigueur) et remboursable uniquement avant départ : 19 € de frais dès 6 jours avant départ.",
+          "Dès 30 min avant départ, billet échangeable 2 fois max (même jour, même trajet) et non remboursable après 1 échange."
+        ],
+        "departureOffset": "+0200",
+        "departureUnixUtc": 1686590640,
+        "destinationProviderStopId": "FRUQQ",
+        "fareName": "PREM'S",
+        "durationMinutes": 118,
+        "feeCents": 0,
+        "providerId": "18",
+        "includedProviderFeeCents": 0,
+        "isAvailable": true,
+        "isBookable": true,
+        "originProviderStopId": "FRPLY",
+        "priceCents": 2500,
+        "segmentProviderBrandId": "VSC",
+        "segmentProviderId": 10,
+        "transportType": "train",
+        "vehicleIdentifier": "6669",
+        "segmentProviderSegmentRefId": "ea4642de-aab7-4cce-a85d-7fb7256564b4",
+        "includedBaggage": true,
+        "notAvailableReason": null
+      },
+      "4052b766-94c4-4e1d-851b-c0e0b312ea28": {
+        "id": "4052b766-94c4-4e1d-851b-c0e0b312ea28",
+        "arrivalOffset": "+0200",
+        "arrivalUnixUtc": 1686597720,
+        "bookingClass": "1_ST_CLASS",
+        "brandName": "TGV INOUI",
+        "co2g": 150,
+        "conditions": [
+          "Echange et remboursement sans frais jusqu'à 30 min après départ.",
+          "Dès 30 min avant départ, billet échangeable 2 fois max (même jour, même trajet) et non remboursable après 1 échange.",
+          "Si emprunt d’un autre train, échange obligatoire."
+        ],
+        "departureOffset": "+0200",
+        "departureUnixUtc": 1686590640,
+        "destinationProviderStopId": "FRUQQ",
+        "fareName": "BUSINESS PREMIERE",
+        "durationMinutes": 118,
+        "feeCents": 0,
+        "providerId": "18",
+        "includedProviderFeeCents": 0,
+        "isAvailable": true,
+        "isBookable": true,
+        "originProviderStopId": "FRPLY",
+        "priceCents": 14200,
+        "segmentProviderBrandId": "VSC",
+        "segmentProviderId": 10,
+        "transportType": "train",
+        "vehicleIdentifier": "6669",
+        "segmentProviderSegmentRefId": "6266132b-fe0c-421c-a821-9cef60c71fbf",
+        "includedBaggage": true,
+        "notAvailableReason": null
+      }
+    }
+  }
+}
+```
+
 ## Create an order
 
 The creation of an order is done from a cart, so you will not be able to create an order if you have not **[created](/docs/How-to-Guides/book-on-tictactrip/tutorial#create-a-cart)** and **[updated](/docs/How-to-Guides/book-on-tictactrip/tutorial#update-a-cart)** the cart before.  
