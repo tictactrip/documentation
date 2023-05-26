@@ -85,14 +85,44 @@ curl --location --request POST 'https://api.tictactrip.eu/v2/results' \
 --header 'Authorization: Bearer token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-	"originGpuid": "c|FRpralvano@u0hf0",
-	"destinationGpuid": "c|FRmoutiers@u0hdu",
-	"outboundDate": "2022-09-19T00:00:00Z",
-	"passengers": [
-		{
-			"age": 30
-		}
-	]
+ "originGpuid": "c|FRpralvano@u0hf0",
+ "destinationGpuid": "c|FRmoutiers@u0hdu",
+ "outboundDate": "2022-09-19T00:00:00Z",
+ "passengers": [
+  {
+   "age": 30
+  }
+ ]
+}'
+```
+
+It is also possible to pass filters during the search. These filters allow to add precision to the search such as earliest departure time, latest arrival time, maximum number of stopovers, or minimum trip duration. For round trips, filters should be specified for each way.
+
+```bash
+curl --location --request POST 'https://api.tictactrip.eu/v2/results' \
+--header 'Authorization: Bearer token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "originGpuid": "c|FRpralvano@u0hf0",
+ "destinationGpuid": "c|FRmoutiers@u0hdu",
+ "outboundDate": "2022-09-19T00:00:00Z",
+ "passengers": [
+  {
+   "age": 30
+  }
+ ],
+  "outboundFilters": {
+    "timeFilters": {
+      "minDepartureTime": "2022-09-19T00:00",
+      "minArrivalTime": "2022-09-19T10:00",
+      "maxArrivalTime": "2022-09-19T22:00"
+    },
+    "durationFilters": {
+      "minDuration": 10,
+      "maxDuration": 1000
+    }
+    // ...
+  }
 }'
 ```
 
