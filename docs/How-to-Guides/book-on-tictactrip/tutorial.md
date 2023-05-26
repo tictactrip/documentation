@@ -638,13 +638,11 @@ If the provided conditions are acceptable, you can then cancel the ticket by cal
 ### Request example for a segment cancellation
 
 :::tip
-As for bookings cancellations are treated asynchronously, you can the order summary endpoint to know if the cancellation was successful or not.
+As for bookings cancellations are treated asynchronously, you can check the [order summary](/api#operation/GetOrder) endpoint to know if the cancellation was successful or not.
 :::
 
 :::tip
-
 Check the full description of this **[request](/api#operation/partnerCancelBooking)**.
-
 :::
 
 **Request:**
