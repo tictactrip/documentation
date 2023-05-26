@@ -590,3 +590,85 @@ Check the full description of this **[request](/api#operation/DownloadTicket)**.
 If there are several tickets in the order, they will all be in the same pdf.
 
 :::
+
+## Ticket cancellation
+
+We offer ticket cancellation on a per segment basis, for all the passengers. This is two step process, you will first ask for cancellations conditions and then cancel the ticket if you wish.
+
+To retrieve the cancellation conditions, you must pass the id of the segment you want to cancel. It can be found in the [order summary](/api#operation/GetOrder).
+
+
+This endpoint will provide:
+- A refundable field which is a boolean indicating if the ticket is cancellable or not.
+- A feeCents field which corresponds to the fees the carrier will apply if you cancel the ticket.
+- A cutoff field providing the date and time until which you can cancel the ticket with the given conditions.
+- An isRefundedByVoucher field indicating if the refund will be done by voucher or cash. Be aware that those vouchers aren't usable on Tictactrip's inventory but only for the carrier that issued them.
+
+### Request example for cancellation conditions retrieval
+
+:::tip
+
+Check the full description of this **[request](/api#operation/partnerCancellationConditions)**.
+
+:::
+
+**Request:**
+
+```bash
+curl --location 'https://api.tictactrip.eu/booking/v3/orderTickets/496315/cancellation/conditions' \
+--header 'Authorization: Bearer' \
+--header 'Content-Type: application/json'
+```
+
+**Response:**
+
+```json
+{
+  "isCancellable": true,
+  "feeCents": 0,
+  "cutoff": "2023-05-26T14:00:00.000Z",
+  "bookingId": "Q6NX4V",
+  "isRefundedByVoucher": false
+}
+```
+
+If the provided conditions are acceptable, you can then cancel the ticket by calling the next endpoint.
+
+
+### Request example for a segment cancellation
+
+:::tip
+As for bookings cancellations are treated asynchronously, you can the order summary endpoint to know if the cancellation was successful or not.
+:::
+
+:::tip
+
+Check the full description of this **[request](/api#operation/partnerCancelBooking)**.
+
+:::
+
+**Request:**
+
+```bash
+curl --location --request PUT 'https://api.tictactrip.eu/booking/v3/orderTickets/496315/cancellation' \
+--header 'Authorization: Bearer' \
+--header 'Content-Type: application/json' \
+--data ''
+```
+
+**Response:**
+
+```bash
+{
+    "createdAt": "2023-05-26T14:33:28.338Z",
+    "id": 3184,
+    "orderTicketCancellationId": 2153,
+    "refundedAmountCents": null,
+    "message": null,
+    "status": "INPROGRESS",
+    "refundType": null,
+    "refundExpirationDateUtc": null,
+    "updatedAt": "2023-05-26T14:33:28.335Z",
+    "deletedAt": null
+}
+```
