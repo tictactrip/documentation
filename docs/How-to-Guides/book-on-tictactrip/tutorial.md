@@ -597,20 +597,14 @@ We offer ticket cancellation on a per segment basis, for all the passengers. Thi
 
 To retrieve the cancellation conditions, you must pass the id of the segment you want to cancel. It can be found in the [order summary](/api#operation/GetOrder).
 
-
 This endpoint will provide:
-- A refundable field which is a boolean indicating if the ticket is cancellable or not.
-- A feeCents field which corresponds to the fees the carrier will apply if you cancel the ticket.
-- A cutoff field providing the date and time until which you can cancel the ticket with the given conditions.
-- An isRefundedByVoucher field indicating if the refund will be done by voucher or cash. Be aware that those vouchers aren't usable on Tictactrip's inventory but only for the carrier that issued them.
+
+- A `refundable` field which is a boolean indicating if the ticket is cancellable or not.
+- A `feeCents` field which corresponds to the fees the carrier will apply if you cancel the ticket.
+- A `cutoff` field providing the date and time until which you can cancel the ticket with the given conditions.
+- An `isRefundedByVoucher` field indicating if the refund will be done by voucher or cash. Be aware that those vouchers aren't usable on Tictactrip's inventory but only for the carrier that issued them.
 
 ### Request example for cancellation conditions retrieval
-
-:::tip
-
-Check the full description of this **[request](/api#operation/partnerCancellationConditions)**.
-
-:::
 
 **Request:**
 
@@ -634,16 +628,13 @@ curl --location 'https://api.tictactrip.eu/booking/v3/orderTickets/496315/cancel
 
 If the provided conditions are acceptable, you can then cancel the ticket by calling the next endpoint.
 
+:::tip
+
+Check the full description of this **[request](/api#operation/partnerCancellationConditions)**.
+
+:::
 
 ### Request example for a segment cancellation
-
-:::tip
-As for bookings cancellations are treated asynchronously, you can check the [order summary](/api#operation/GetOrder) endpoint to know if the cancellation was successful or not.
-:::
-
-:::tip
-Check the full description of this **[request](/api#operation/partnerCancelBooking)**.
-:::
 
 **Request:**
 
@@ -670,3 +661,30 @@ curl --location --request PUT 'https://api.tictactrip.eu/booking/v3/orderTickets
     "deletedAt": null
 }
 ```
+
+:::tip
+Check the full description of this **[request](/api#operation/partnerCancelBooking)**.
+:::
+
+:::tip
+As for bookings cancellations are treated asynchronously, you can check the [order summary](/api#operation/GetOrder) endpoint to know if the cancellation was successful or not.
+:::
+
+:::info
+
+The [order summary](/api#operation/GetOrder) returns the current status of an Order with the `orderStatus` property. In case of cancellation, the `orderStatus` may either be `CANCELED` or `CANCELED_PARTIAL`. The `CANCELED_PARTIAL` status means that at least one [segment](/docs/Reference/glossary#segment) of the order has been canceled but not all of them. The `orderStatus` is `CANCELED` only when all [segments](/docs/Reference/glossary#segment) of the order have been canceled and/or refunded.
+
+:::
+
+:::info
+
+On the other hand, the current status of a [segments](/docs/Reference/glossary#segment)  is given by the `bookingStatus` property. In case of cancellation, the status of a [segments](/docs/Reference/glossary#segment) may either be `CANCELED` or `REFUNDED`. The `CANCELED` status means that the cancellation of the [segments](/docs/Reference/glossary#segment) is successful. At this point, the cancellation may lead to a refund with a voucher or a refund with a wire transfer. Only in case of wire transfer and only if the call for a wire transfer is successful, the `bookingStatus` will be `REFUNDED`.
+
+In case of cancellation, another property is available on the [segments](/docs/Reference/glossary#segment). `cancellationStatus` may also be used to keep track of the current status of the cancellation. Its possible values are `INPROGRESS`, `ACCEPTED`, `REFUNDED` and `ERRORED`:
+
+- `INPROGRESS` when the cancellation is still being processed.
+- `ACCEPTED` when the cancellation is successful. Terminal status in case of refund with a voucher.
+- `REFUNDED` when the cancellation is successful and refunded with a wire transfer.
+- If ever an error occurs during the cancellation process, the `bookingStatus` will stay at its latest know status and the `cancellationStatus` will be set to `ERRORED`.
+
+:::
