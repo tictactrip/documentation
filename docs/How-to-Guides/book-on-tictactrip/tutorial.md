@@ -123,6 +123,16 @@ Check the definition of a **[trip](/docs/Reference/glossary#trip)** and the full
 Now that you have created a cart, you will have to update it with the information of the passengers and the customer.  
 You must pass the id of the cart **[previously created](/docs/How-to-Guides/book-on-tictactrip/tutorial#create-a-cart)** as a parameter in the url.
 
+:::tip
+
+Some of our providers require governement issued IDs to be passed for each passenger in the identityDocument object.
+
+
+Some of those carriers are the spanish companies RENFE and iryo.
+A complete list can be found on this **[endpoint](/api#operation/GetSegmentProviders)** by looking at the `requiresIdentityDocument` field.
+
+:::
+
 ```bash
 curl --location --request PATCH 'https://api.tictactrip.eu/booking/v3/carts/bf58e6091bd04eb2' \
 --header 'Authorization: Bearer token' \
