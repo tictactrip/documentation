@@ -9,8 +9,7 @@ You can use this [**POSTMAN collection**](../static/Tictactrip.postman_collectio
 :::
 
 ## 1. Get origin and destination IDs
-
-**`GET /stopClusters`**
+**[`GET /stopClusters`](/api#operation/GetAllStopClusters)**
 
 In order to search on **[Tictactrip](https://www.tictactrip.eu/)** you will need the IDs of two places. They can be of two types : **[stopCluster](/docs/glossary#stopcluster)** or **[stopGroup](/docs/glossary#stopGroup)**.
 
@@ -23,10 +22,8 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
 
 ### Response body example
 
-
 ```json
 [
-  //...
   // The stopCluster for Lyon
     {
         "id": "c|FRlyon____@u05kq",
@@ -76,27 +73,16 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
 ```
 
 
-:::tip
-
-Check the definition of a **[stopCluster](/docs/glossary#stopcluster)** and the full description of this **[request](/api#operation/GetAllStopClusters)**.
-
-:::
-
 :::info
-
 Updates on these entities are generally done every 1 to 2 months.
-
 :::
 
 :::caution
-
 For performance and load reasons, we strongly recommend that you do not do this mapping in a live manner.
-
 :::
 
 ## 2. Get results
-
-**`POST /v2/results`**
+**[`POST /v2/results`](/api#operation/GetResults)**
 
 
 Now that you have an origin and a destination id from the **[previous step](/docs/search#1-get-origin-and-destination-ids)** you can do a search by specifying a date and the age of a passenger.
@@ -274,12 +260,6 @@ curl --location --request POST 'https://api.tictactrip.eu/v2/results' \
   }
 }
 ```
-
-:::tip
-
-Check the full description of this **[request](/api#operation/GetResults)**.
-
-:::
 
 :::info
 
