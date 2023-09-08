@@ -6,12 +6,18 @@ sidebar_position: 1
 
 **[Tictactrip](https://www.tictactrip.eu/)** develops the platform for booking and distributing eco-responsible long-distance trips.
 
-## Get Started
 
 ### Authentication
 
-Send an email to dev@tictactrip.eu to receive an authentication token.
+Send an email to `dev@tictactrip.eu` to receive an authentication token.
 
-### What you'll need
+## Overview
 
-[Curl](https://github.com/curl/curl) or anything to make requests.
+Here you can find the complete flow described step by step in the tutorials **[Search on Tictactrip](/docs/search)** and **[Book on Tictactrip](/docs/book)**.
+You'll need [Curl](https://github.com/curl/curl), Postman or scripts to make requests.
+
+:::tip
+[**Download this example POSTMAN collection**](../static/Tictactrip.postman_collection.json) and add your token in the variables to get started quickly !
+:::
+
+![search and booking flow](../static/img/figjam.png)

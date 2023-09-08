@@ -1,12 +1,17 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Tutorial
+# Book
 
-## Create a cart
+:::tip
+You can use this [**POSTMAN collection**](../static/Tictactrip.postman_collection.json) to test the API.
+:::
 
-The first step to make a booking is to create a cart. It has to contain at least an `outboundTripId` which you can retrieve with a **[search](/docs/How-to-Guides/search-on-tictactrip/tutorial)** and minimal passenger information for it to work.
+## 3. Create a cart
+**`POST /booking/v3/carts`**
+
+The first step to make a booking is to create a cart. It has to contain at least an `outboundTripId` which you can retrieve with a **[search](/docs/search)** and minimal passenger information for it to work.
 
 ```bash
 curl --location --request POST 'https://api.tictactrip.eu/booking/v3/carts' \
@@ -114,14 +119,15 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/carts' \
 
 :::tip
 
-Check the definition of a **[trip](/docs/Reference/glossary#trip)** and the full description of this **[request](/api#operation/CreateCart)**.
+Check the definition of a **[trip](/docs/glossary#trip)** and the full description of this **[request](/api#operation/CreateCart)**.
 
 :::
 
-## Update a cart
+## 4. Update the cart
+**`PATCH /booking/v3/carts/{cart_id}`**
 
 Now that you have created a cart, you will have to update it with the information of the passengers and the customer.  
-You must pass the id of the cart **[previously created](/docs/How-to-Guides/book-on-tictactrip/tutorial#create-a-cart)** as a parameter in the url.
+You must pass the id of the cart **[previously created](/docs/book#3-create-a-cart)** as a parameter in the url.
 
 :::tip
 
@@ -213,7 +219,8 @@ A price lookup is done everytime a cart is updated.
 
 :::
 
-## Fare selection
+## 5. Select fare
+**`PATCH /booking/v3/carts/{cart_id}`**
 
 :::caution
 
@@ -227,7 +234,7 @@ You can choose your **fare**, segment by segment by mapping each `segment id` to
 
 The following example is based on this first patch response:
 
-![](../../../static/img/fare-sample.png)
+![](../static/img/fare-sample.png)
 
 Let's say you want to book your first segment in first class, and your last one in second class. You must do the following request:
 
@@ -427,9 +434,10 @@ A price lookup is done everytime a cart is updated.
 }
 ```
 
-## Create an order
+## 6. Create an order
+**`POST /booking/v3/orders`**
 
-The creation of an order is done from a cart, so you will not be able to create an order if you have not **[created](/docs/How-to-Guides/book-on-tictactrip/tutorial#create-a-cart)** and **[updated](/docs/How-to-Guides/book-on-tictactrip/tutorial#update-a-cart)** the cart before.  
+The creation of an order is done from a cart, so you will not be able to create an order if you have not **[created](/docs/book#3-create-a-cart)** and **[updated](/docs/book#4-update-the-cart)** the cart before.  
 You must pass the `cartId` in the body of the request.
 
 ```bash
@@ -481,10 +489,11 @@ When creating an order an option is placed on the ticket(s). Depending of the co
 
 :::
 
-## Book an order
+## 7. Book an order
+**`POST /booking/v3/orders/{order_id}`**
 
-The booking is done asynchronously from an **[order](/docs/How-to-Guides/book-on-tictactrip/tutorial#create-an-order)**.  
-You must pass the id of the order **[previously created](/docs/How-to-Guides/book-on-tictactrip/tutorial#create-an-order)** as a parameter in the url.
+The booking is done asynchronously from an **[order](/docs/book#6-create-an-order)**.  
+You must pass the id of the order **[previously created](/docs/book#6-create-an-order)** as a parameter in the url.
 
 ```bash
 curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18/book' \
@@ -525,7 +534,8 @@ Check the full description of this **[request](/api#operation/CreateBook)**.
 
 :::
 
-## Get an order
+## 8. Get an order status
+**`GET /booking/v3/orders/{order_id}`**
 
 As the booking is done asynchronously, you have to call this endpoint to know if the booking was successful or not.  
 If the `orderStatus` is set to `SUCCESS`, then the booking went well.
@@ -575,9 +585,10 @@ A booking can be long, it may be necessary to call this endpoint several times.
 
 :::
 
-## Download tickets
+## 9. Download tickets
+**`GET /booking/v3/orders/{order_id/ticket?filename={file_name}`**
 
-Once you have validated that the booking was successful by **[getting the order](/docs/How-to-Guides/book-on-tictactrip/tutorial#get-an-order)** you can download the tickets of the order.
+Once you have validated that the booking was successful by **[getting the order](/docs/book#8-get-an-order-status)** you can download the tickets of the order.
 You must pass the id of the order and the file name you want to give to the file as a parameter in the url.
 
 ```bash
@@ -587,7 +598,7 @@ curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73
 
 ### Response body example
 
-![ticket screenshot](../../../static/img/altibusTicketPdf.png)
+![ticket screenshot](../static/img/altibusTicketPdf.png)
 
 :::tip
 
@@ -602,6 +613,8 @@ If there are several tickets in the order, they will all be in the same pdf.
 :::
 
 ## Ticket cancellation
+### Get cancellation conditions
+**`GET /booking/v3/orderTickets/{order_id}/cancellation/conditions`**
 
 We offer ticket cancellation on a per segment basis, for all the passengers. This is two step process, you will first ask for cancellations conditions and then cancel the ticket if you wish.
 
@@ -644,6 +657,9 @@ Check the full description of this **[request](/api#operation/partnerCancellatio
 
 :::
 
+### Request a ticket cancellation
+**`PUT /booking/v3/orderTickets/{order_id}/cancellation`**
+
 ### Request example for a segment cancellation
 
 **Request:**
@@ -681,20 +697,16 @@ As for bookings cancellations are treated asynchronously, you can check the [ord
 :::
 
 :::info
-
-The [order summary](/api#operation/GetOrder) returns the current status of an Order with the `orderStatus` property. In case of cancellation, the `orderStatus` may either be `CANCELED` or `CANCELED_PARTIAL`. The `CANCELED_PARTIAL` status means that at least one [segment](/docs/Reference/glossary#segment) of the order has been canceled but not all of them. The `orderStatus` is `CANCELED` only when all [segments](/docs/Reference/glossary#segment) of the order have been canceled and/or refunded.
-
+The [order summary](/api#operation/GetOrder) returns the current status of an Order with the `orderStatus` property. In case of cancellation, the `orderStatus` may either be `CANCELED` or `CANCELED_PARTIAL`. The `CANCELED_PARTIAL` status means that at least one [segment](/docs/glossary#segment) of the order has been canceled but not all of them. The `orderStatus` is `CANCELED` only when all [segments](/docs/glossary#segment) of the order have been canceled and/or refunded.
 :::
 
 :::info
+On the other hand, the current status of a [segments](/docs/glossary#segment)  is given by the `bookingStatus` property. In case of cancellation, the status of a [segments](/docs/glossary#segment) may either be `CANCELED` or `REFUNDED`. The `CANCELED` status means that the cancellation of the [segments](/docs/glossary#segment) is successful. At this point, the cancellation may lead to a refund with a voucher or a refund with a wire transfer. Only in case of wire transfer and only if the call for a wire transfer is successful, the `bookingStatus` will be `REFUNDED`.
 
-On the other hand, the current status of a [segments](/docs/Reference/glossary#segment)  is given by the `bookingStatus` property. In case of cancellation, the status of a [segments](/docs/Reference/glossary#segment) may either be `CANCELED` or `REFUNDED`. The `CANCELED` status means that the cancellation of the [segments](/docs/Reference/glossary#segment) is successful. At this point, the cancellation may lead to a refund with a voucher or a refund with a wire transfer. Only in case of wire transfer and only if the call for a wire transfer is successful, the `bookingStatus` will be `REFUNDED`.
-
-In case of cancellation, another property is available on the [segments](/docs/Reference/glossary#segment). `cancellationStatus` may also be used to keep track of the current status of the cancellation. Its possible values are `INPROGRESS`, `ACCEPTED`, `REFUNDED` and `ERRORED`:
+In case of cancellation, another property is available on the [segments](/docs/glossary#segment). `cancellationStatus` may also be used to keep track of the current status of the cancellation. Its possible values are `INPROGRESS`, `ACCEPTED`, `REFUNDED` and `ERRORED`:
 
 - `INPROGRESS` when the cancellation is still being processed.
 - `ACCEPTED` when the cancellation is successful. Terminal status in case of refund with a voucher.
 - `REFUNDED` when the cancellation is successful and refunded with a wire transfer.
 - If ever an error occurs during the cancellation process, the `bookingStatus` will stay at its latest know status and the `cancellationStatus` will be set to `ERRORED`.
-
 :::

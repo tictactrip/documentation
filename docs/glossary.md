@@ -1,65 +1,22 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 # Glossary
 
-## Segment
-
-### Definition
-
-A Segment has an origin (city and station), a destination (city and station), a price, a date, hours.
-
-### Example
-
-A train that leaves Paris Gare De Lyon at 5:37 pm on september 8, 2022 and arrives in Marseille St Charles at 8:57 pm on september 8, 2022 for 79€ is a Segment.
-
-Indeed we have a city (Paris), a station (Paris Gare De Lyon), a date (september 8, 2022), a time (5:37 pm and 8:57 pm) and a price (79€).
-
-```json
-{
-  "segments": [
-    {
-      "id": "1764020",
-      "company": "Sncf Connect",
-      "mean": "train",
-      "origin": {
-        "city": "Paris",
-        "country": "France",
-        "station": "Paris Gare De Lyon",
-        "lat": 45.3819,
-        "long": 6.72121
-      },
-      "destination": {
-        "city": "Marseille",
-        "country": "France",
-        "station": "Marseilles St Charles",
-        "lat": 45.4852,
-        "long": 6.5291
-      },
-      "isBookable": true,
-      "priceCents": 7900,
-      "feeCents": 0,
-      "departureUTC": 1662651420,
-      "arrivalUTC": 1662663420,
-      "durationMinutes": 200
-      //...
-    }
-  ]
-}
-```
-
 ## Trip
 
 ### Definition
+![search and booking flow](../static/img/trip-segment.png)
 
-A **trip** represents a travel, typically there are two trips for a round trip and a single one for a one-way. A **trip** consist of several **[Segments](/docs/Reference/glossary#segment)**.
+A **trip** represents a travel, typically there are two trips for a round trip and a single one for a one-way. A **trip** consist of one or several **[Segments](/docs/glossary#segment)**.
+
 
 ### Example
 
-I make a trip from Paris to Brussels, it contains two **[Segments](/docs/Reference/glossary#segment)**, Paris - Lille by Ouigo then Lille - Brussels by Flixbus.
+I make a trip from Paris to Brussels, it contains two **[Segments](/docs/glossary#segment)**, Paris - Lille by Ouigo then Lille - Brussels by Flixbus.
 
-This combination of **[Segments](/docs/Reference/glossary#segment)** constitutes a **trip**.
+This combination of **[Segments](/docs/glossary#segment)** constitutes a **trip**.
 
 ```json
 {
@@ -155,6 +112,50 @@ This combination of **[Segments](/docs/Reference/glossary#segment)** constitutes
 }
 ```
 
+## Segment
+
+### Definition
+
+A **Segment** is a subpart of a **Trip**. It has an origin (city and station), a destination (city and station), a price, a date, hours.
+
+### Example
+
+A train that leaves Paris Gare De Lyon at 5:37 pm on september 8, 2022 and arrives in Marseille St Charles at 8:57 pm on september 8, 2022 for 79€ is a Segment.
+Indeed we have a city (Paris), a station (Paris Gare De Lyon), a date (september 8, 2022), a time (5:37 pm and 8:57 pm) and a price (79€).
+
+```json
+{
+  "segments": [
+    {
+      "id": "1764020",
+      "company": "Sncf Connect",
+      "mean": "train",
+      "origin": {
+        "city": "Paris",
+        "country": "France",
+        "station": "Paris Gare De Lyon",
+        "lat": 45.3819,
+        "long": 6.72121
+      },
+      "destination": {
+        "city": "Marseille",
+        "country": "France",
+        "station": "Marseilles St Charles",
+        "lat": 45.4852,
+        "long": 6.5291
+      },
+      "isBookable": true,
+      "priceCents": 7900,
+      "feeCents": 0,
+      "departureUTC": 1662651420,
+      "arrivalUTC": 1662663420,
+      "durationMinutes": 200
+      //...
+    }
+  ]
+}
+```
+
 ## StopGroup
 
 ### Definition
@@ -164,6 +165,7 @@ A **stopGroup** is a set of stations. In "real world" semantics, a **stopGroup**
 ### Example
 
 A **stopGroup** "Paris Bercy" has two stations being the "train station" and the "bus station", but in practice, the user only wants to know about "Paris Bercy" as a transportation hub. Thus, we group them under a single entity named **stopGroup**.
+A stopGroup looks like `g|FRpariberc@u09ty4`.
 
 ```json
 {
@@ -183,11 +185,12 @@ A **stopGroup** "Paris Bercy" has two stations being the "train station" and the
 
 ### Definition
 
-A **stopCluster** is a collection of **[stopGroups](/docs/Reference/glossary#stopgroup)**. It corresponds to a user intent. It is often illustrated by a city, but it can be anything the user is supposed to be looking for.
+A **stopCluster** is a collection of **[stopGroups](/docs/glossary#stopgroup)**. It corresponds to a user intent. It is often illustrated by a city, but it can be anything the user is supposed to be looking for.
+A stop cluster looks like `c|FRparis___@u09tv`.
 
 ### Example
 
-"Paris" is a **stopCluster**.
+"Paris" and "Disneyland Paris" are **stopClusters**.
 
 ```json
 {
@@ -201,3 +204,17 @@ A **stopCluster** is a collection of **[stopGroups](/docs/Reference/glossary#sto
   //...
 }
 ```
+
+## Place ID
+### Definition
+
+The name of a stopCluster or a stopGroup is not unique. For example, there are several "Paris" in the world. To avoid ambiguity, we use a unique identifier for each place. It is called a place ID.
+
+### Example
+`c|FRparis___@u09tv`
+
+The place ID is made of:
+- Stop type: `c|` or `g|`
+- Country code: `FR`
+- Place name in 8 characters: `paris___`
+- Geohash: `@u9tv`
