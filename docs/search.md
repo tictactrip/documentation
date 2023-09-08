@@ -1,13 +1,20 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Tutorial
+# Search
 
-## Get origin and destination ids
+:::tip
+You can use this [**POSTMAN collection**](../static/Tictactrip.postman_collection.json) to test the API.
+:::
 
-In order to search on **[Tictactrip](https://www.tictactrip.eu/)** you will need two **[stopCluster](/docs/Reference/glossary#stopcluster)** IDs, one for the origin and one for the destination.  
-For example `c|FRpralvano@u0hf0` and `c|FRmoutiers@u0hdu`. You can notice that they are always prefixed by a "c" for "cluster".
+## 1. Get origin and destination IDs
+
+**`GET /stopClusters`**
+
+In order to search on **[Tictactrip](https://www.tictactrip.eu/)** you will need the IDs of two places. They can be of two types : **[stopCluster](/docs/glossary#stopcluster)** or **[stopGroup](/docs/glossary#stopGroup)**.
+
+For example `c|FRlyon____@u05kq` for Lyon and `g|FRlysaextg@u05s5e` for its airport train station, "Lyon-Saint-Exupery TGV".
 
 ```bash
 curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
@@ -16,51 +23,62 @@ curl --location --request GET 'https://api.tictactrip.eu/v2/stopClusters' \
 
 ### Response body example
 
+
 ```json
 [
   //...
-  {
-    "id": "c|FRpralvano@u0hf0",
-    "name": "Pralognan La Vanoise",
-    "city": "Pralognan La Vanoise",
-    "region": "Auvergne-Rhône-Alpes",
-    "country": "FR",
-    "latitude": 45.3819,
-    "longitude": 6.72121
-    //...
-  },
-  {
-    "id": "c|FRmoutiers@u0hdu",
-    "name": "Moûtiers",
-    "city": "Moûtiers",
-    "region": "Auvergne-Rhône-Alpes",
-    "country": "FR",
-    "latitude": 45.4852,
-    "longitude": 6.5291
-    //...
-  },
-  {
-    "id": "c|PTvilareal@ez66z",
-    "name": "Vila Real",
-    "city": "Vila Real",
-    "region": "Norte",
-    "country": "PT",
-    "latitude": 41.2979376,
-    "longitude": -7.75298965523
-    //...
+  // The stopCluster for Lyon
+    {
+        "id": "c|FRlyon____@u05kq",
+        "name": "Lyon",
+        "city": "Lyon",
+        "region": "Auvergne-Rhône-Alpes",
+        "country": "FR",
+        "latitude": 45.764043,
+        "longitude": 4.835659,
+        "transportTypes": [
+            "train"
+        ],
+        // The stopGroups belonging to this stopCluster
+        "stopGroups": [
+            {
+                "id": "g|FRlyonperr@u05kmb",
+                "name": "Lyon, Perrache",
+                "city": "Lyon",
+                "region": "Auvergne-Rhône-Alpes",
+                "country": "FR",
+                "address": "Voute Ouest De Perrache, 69002 Lyon, France",
+                "latitude": 45.74916,
+                "longitude": 4.82632,
+                "transportTypes": [
+                    "train"
+                ]
+            },
+            {
+                "id": "g|FRlysaextg@u05s5e",
+                "name": "Lyon-Saint-Exupery Tgv",
+                "city": "Lyon",
+                "region": "Auvergne-Rhône-Alpes",
+                "country": "FR",
+                "address": "2 Rue De Finlande, 69125 Colombier-Saugnieu, France",
+                "latitude": 45.7209,
+                "longitude": 5.0759,
+                "transportTypes": [
+                    "train"
+                ]
+            },
+            // ... other stopGroups
+        ]
+    }
+      // ... other stopClusters
   }
-  //...
 ]
 ```
 
-:::note
 
-Usually, our partners perform a mapping between their internal station IDs and our **[stopGroups](/docs/Reference/glossary#stopgroup)**. When they want to perform a search on a **[stopGroup](/docs/Reference/glossary#stopgroup)**, they retrieve the **[stopCluster](/docs/Reference/glossary#stopcluster)** previously associated in their mapping and execute their search requests with this **[stopCluster(s)](/docs/Reference/glossary#stopcluster)**.
-
-:::
 :::tip
 
-Check the definition of a **[stopCluster](/docs/Reference/glossary#stopcluster)** and the full description of this **[request](/api#operation/GetAllStopClusters)**.
+Check the definition of a **[stopCluster](/docs/glossary#stopcluster)** and the full description of this **[request](/api#operation/GetAllStopClusters)**.
 
 :::
 
@@ -76,9 +94,12 @@ For performance and load reasons, we strongly recommend that you do not do this 
 
 :::
 
-## Get results
+## 2. Get results
 
-Now that you have an origin and a destination id from the **[previous step](/docs/How-to-Guides/search-on-tictactrip/tutorial#get-origin-and-destination-ids)** you can do a search by specifying a date and the age of a passenger.
+**`POST /v2/results`**
+
+
+Now that you have an origin and a destination id from the **[previous step](/docs/search#1-get-origin-and-destination-ids)** you can do a search by specifying a date and the age of a passenger.
 
 ```bash
 curl --location --request POST 'https://api.tictactrip.eu/v2/results' \
@@ -96,7 +117,46 @@ curl --location --request POST 'https://api.tictactrip.eu/v2/results' \
 }'
 ```
 
+### Filters
 It is also possible to pass filters during the search. These filters allow to add precision to the search such as earliest departure time, latest arrival time, maximum number of stopovers, or minimum trip duration. For round trips, filters should be specified for each way.
+Available Filters for Search Results
+
+#### `timeFilters`
+In 'YYYY-MM-DDTHH:mm' format.
+
+`minDepartureTime`: Earliest time a trip should depart.
+
+`maxDepartureTime`: Latest time a trip should depart.
+
+`minArrivalTime`: Earliest time by which a trip should arrive at the destination.
+
+`maxArrivalTime`: Latest time by which a trip should arrive at the destination.
+
+#### `durationFilters`
+In Minutes
+
+`minDuration`: Shortest acceptable trip duration, measured in minutes.
+
+`maxDuration`: Longest acceptable trip duration, also in minutes.
+
+#### `stopoverFilters`
+`minStopovers`: Minimum number of stopovers allowed during the trip.
+
+`maxStopovers`: Maximum number of stopovers allowed.
+
+#### `connectionFilters`
+In kilometers.
+
+`maxConnectionDistance`: Indicates the maximum distance, between two stops during a trip.
+
+#### `relevanceSorts`
+`durationOverPriceFactor`: A value between 0 and 1 to balance the relevance between trip price and duration.
+
+0 implies price is the only factor.
+
+0.5 means both factors are equally important.
+
+1 implies duration is the only factor considered.
 
 ```bash
 curl --location --request POST 'https://api.tictactrip.eu/v2/results' \
