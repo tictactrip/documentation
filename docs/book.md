@@ -9,7 +9,7 @@ You can use this [**POSTMAN collection**](../static/Tictactrip.postman_collectio
 :::
 
 ## 3. Create a cart
-**`POST /booking/v3/carts`**
+**[`POST /booking/v3/carts`](/api#operation/CreateCart)**
 
 The first step to make a booking is to create a cart. It has to contain at least an `outboundTripId` which you can retrieve with a **[search](/docs/search)** and minimal passenger information for it to work.
 
@@ -117,26 +117,17 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/carts' \
 }
 ```
 
-:::tip
-
-Check the definition of a **[trip](/docs/glossary#trip)** and the full description of this **[request](/api#operation/CreateCart)**.
-
-:::
-
 ## 4. Update the cart
-**`PATCH /booking/v3/carts/{cart_id}`**
+**[`PATCH /booking/v3/carts/{cart_id}`](/api#operation/UpdateCart)**
 
 Now that you have created a cart, you will have to update it with the information of the passengers and the customer.  
 You must pass the id of the cart **[previously created](/docs/book#3-create-a-cart)** as a parameter in the url.
 
 :::tip
-
 Some of our providers require governement issued IDs to be passed for each passenger in the identityDocument object.
-
 
 Some of those carriers are the spanish companies RENFE and iryo.
 A complete list can be found on this **[endpoint](/api#operation/GetSegmentProviders)** by looking at the `requiresIdentityDocument` field.
-
 :::
 
 ```bash
@@ -207,20 +198,14 @@ curl --location --request PATCH 'https://api.tictactrip.eu/booking/v3/carts/bf58
 }
 ```
 
-:::tip
-
-Check the full description of this **[request](/api#operation/UpdateCart)**.
-
-:::
-
 :::caution
 
 A price lookup is done everytime a cart is updated.
 
 :::
 
-## 5. Select fare
-**`PATCH /booking/v3/carts/{cart_id}`**
+### Select fare (optionnal)
+**[`PATCH /booking/v3/carts/{cart_id}`](/api#operation/UpdateCart)**
 
 :::caution
 
@@ -434,8 +419,8 @@ A price lookup is done everytime a cart is updated.
 }
 ```
 
-## 6. Create an order
-**`POST /booking/v3/orders`**
+## 5. Create an order
+**[`POST /booking/v3/orders`](/api#operation/CreateOrder)**
 
 The creation of an order is done from a cart, so you will not be able to create an order if you have not **[created](/docs/book#3-create-a-cart)** and **[updated](/docs/book#4-update-the-cart)** the cart before.  
 You must pass the `cartId` in the body of the request.
@@ -477,20 +462,14 @@ curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders' \
 }
 ```
 
-:::tip
-
-Check the full description of this **[request](/api#operation/CreateOrder)**.
-
-:::
-
 :::info
 
 When creating an order an option is placed on the ticket(s). Depending of the company selling the ticket(s), the time at which the availability and price is guaranted may vary.
 
 :::
 
-## 7. Book an order
-**`POST /booking/v3/orders/{order_id}`**
+## 6. Book an order
+**[`POST /booking/v3/orders/{order_id}/book`](/api#operation/CreateBook)**
 
 The booking is done asynchronously from an **[order](/docs/book#6-create-an-order)**.  
 You must pass the id of the order **[previously created](/docs/book#6-create-an-order)** as a parameter in the url.
@@ -534,8 +513,8 @@ Check the full description of this **[request](/api#operation/CreateBook)**.
 
 :::
 
-## 8. Get an order status
-**`GET /booking/v3/orders/{order_id}`**
+## 7. Get an order status
+**[`GET /booking/v3/orders/{order_id}`](/api#operation/GetOrder)**
 
 As the booking is done asynchronously, you have to call this endpoint to know if the booking was successful or not.  
 If the `orderStatus` is set to `SUCCESS`, then the booking went well.
@@ -573,20 +552,14 @@ curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73
 }
 ```
 
-:::tip
-
-Check the full description of this **[request](/api#operation/GetOrder)**.
-
-:::
-
 :::info
 
 A booking can be long, it may be necessary to call this endpoint several times.
 
 :::
 
-## 9. Download tickets
-**`GET /booking/v3/orders/{order_id/ticket?filename={file_name}`**
+## 8. Download tickets
+**[`GET /booking/v3/orders/{order_id/ticket?filename={file_name}`](/api#operation/DownloadTicket)**
 
 Once you have validated that the booking was successful by **[getting the order](/docs/book#8-get-an-order-status)** you can download the tickets of the order.
 You must pass the id of the order and the file name you want to give to the file as a parameter in the url.
@@ -600,12 +573,6 @@ curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73
 
 ![ticket screenshot](../static/img/altibusTicketPdf.png)
 
-:::tip
-
-Check the full description of this **[request](/api#operation/DownloadTicket)**.
-
-:::
-
 :::info
 
 If there are several tickets in the order, they will all be in the same pdf.
@@ -614,7 +581,7 @@ If there are several tickets in the order, they will all be in the same pdf.
 
 ## Ticket cancellation
 ### Get cancellation conditions
-**`GET /booking/v3/orderTickets/{order_id}/cancellation/conditions`**
+**[`GET /booking/v3/orderTickets/{order_id}/cancellation/conditions`](/api#operation/PartnerCancellationConditions)**
 
 We offer ticket cancellation on a per segment basis, for all the passengers. This is two step process, you will first ask for cancellations conditions and then cancel the ticket if you wish.
 
@@ -658,7 +625,7 @@ Check the full description of this **[request](/api#operation/partnerCancellatio
 :::
 
 ### Request a ticket cancellation
-**`PUT /booking/v3/orderTickets/{order_id}/cancellation`**
+**[`PUT /booking/v3/orderTickets/{order_id}/cancellation`](/api#operation/PartnerCancelBooking)**
 
 ### Request example for a segment cancellation
 
@@ -687,10 +654,6 @@ curl --location --request PUT 'https://api.tictactrip.eu/booking/v3/orderTickets
     "deletedAt": null
 }
 ```
-
-:::tip
-Check the full description of this **[request](/api#operation/partnerCancelBooking)**.
-:::
 
 :::tip
 As for bookings cancellations are treated asynchronously, you can check the [order summary](/api#operation/GetOrder) endpoint to know if the cancellation was successful or not.
