@@ -127,6 +127,9 @@ You must pass the id of the cart **[previously created](/docs/book#3-create-a-ca
 Some of our providers require governement issued IDs to be passed for each passenger in the identityDocument object.
 
 Some of those carriers are the spanish companies RENFE and iryo.
+
+On March 25 2024, Eurostar routes going to or departing from the UK will require passport details for each passenger.
+
 A complete list can be found on this **[endpoint](/api#operation/GetSegmentProviders)** by looking at the `requiresIdentityDocument` field.
 :::
 
@@ -209,7 +212,7 @@ A price lookup is done everytime a cart is updated.
 
 :::caution
 
-Fare selection is only available for Eurostar Thalys and SNCF brands on applicable journeys.
+Fare selection is only available for Eurostar, Thalys, iryo, ITALO, Renfe, and SNCF brands on applicable journeys.
 
 :::
 
