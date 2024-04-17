@@ -474,6 +474,17 @@ When creating an order an option is placed on the ticket(s). Depending of the co
 ## 6. Book an order
 **[`POST /booking/v3/orders/{order_id}/book`](/api#operation/CreateBook)**
 
+:::caution Caution: Booking are made in a PRODUCTION environment.
+
+This environment is directly connected to our production.
+This means that any book will result in the generation of **REAL tickets**.
+
+Before making a BOOK, you must:
+- Notify us in advance, using the email address [care@tictactrip.eu](mailto:care@tictactrip.eu)
+- Check the trip is fully **CANCELLED** and fully **REFUNDABLE**
+
+:::
+
 The booking is done asynchronously from an **[order](/docs/book#6-create-an-order)**.  
 You must pass the id of the order **[previously created](/docs/book#6-create-an-order)** as a parameter in the url.
 
