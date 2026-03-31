@@ -11,24 +11,24 @@ The cache export system allows partners to retrieve search results in bulk via a
 The partner deposits a CSV request file on the SFTP server of their choice. Tictactrip processes these files **several times a day** and deposits the results as XML files on the same SFTP.
 
 ```
-  Partenaire              SFTP              Tictactrip
-      |                    |                     |
-      |  1. Dépôt CSV      |                     |
-      |------------------->|                     |
-      |                    |                     |
-      |                    |  2. Lecture du CSV  |
-      |                    |  (plusieurs fois/j) |
-      |                    |-------------------->|
-      |                    |                     |
-      |                    |  3. Traitement      |
-      |                    |  des recherches     |
-      |                    |                     |
-      |                    |  4. Dépôt XML       |
-      |                    |<--------------------|
-      |                    |                     |
-      |  5. Lecture XML    |                     |
-      |<-------------------|                     |
-      |                    |                     |
+Partner                SFTP             Tictactrip
+   |                    |                    |
+   |  1. Upload CSV     |                    |
+   |------------------->|                    |
+   |                    |                    |
+   |                    | 2. Read CSV        |
+   |                    | (several times/day)|
+   |                    |------------------->|
+   |                    |                    |
+   |                    | 3. Process         |
+   |                    | search requests    |
+   |                    |                    |
+   |                    | 4. Upload XML      |
+   |                    |<-------------------|
+   |                    |                    |
+   | 5. Retrieve XML    |                    |
+   |<-------------------|                    |
+   |                    |                    |
 ```
 
 ## CSV request file
