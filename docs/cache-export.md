@@ -16,7 +16,7 @@ The partner deposits a CSV request file on the SFTP server of their choice. Tict
       |  1. Dépôt CSV      |                     |
       |------------------->|                     |
       |                    |                     |
-      |                    |  2. Lecture du CSV   |
+      |                    |  2. Lecture du CSV  |
       |                    |  (plusieurs fois/j) |
       |                    |-------------------->|
       |                    |                     |
