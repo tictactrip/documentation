@@ -440,6 +440,40 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "13. Get popular cities from other one",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer token",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.tictactrip.eu/v2/cities/popular/10",
+          "protocol": "https",
+          "host": [
+            "api",
+            "tictactrip",
+            "eu"
+          ],
+          "path": [
+            "v2",
+            "cities",
+            "popular",
+            "10"
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "event": [
