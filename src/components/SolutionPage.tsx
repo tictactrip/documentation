@@ -31,6 +31,28 @@ const SCHEMA_LANG: Record<Locale, string> = {
   ru: 'ru',
 };
 
+// hreflang annotations emitted in the page <head>, mirroring the sitemap.
+// Declaring the localized alternates in-page (not only in the sitemap) lets
+// Google consolidate the per-locale duplicates onto their proper canonical —
+// the "Alternate page with proper canonical tag" relationship.
+const HREFLANG: Record<Locale, string> = {
+  en: 'en-US',
+  fr: 'fr-FR',
+  de: 'de-DE',
+  es: 'es-ES',
+  it: 'it-IT',
+  pt: 'pt-PT',
+  ru: 'ru-RU',
+};
+
+const HREFLANG_LOCALES = Object.keys(HREFLANG) as Locale[];
+
+// Build the absolute URL for a given locale + site-relative path.
+function localizedUrl(locale: Locale, urlPath: string): string {
+  const prefix = locale === 'en' ? '' : `/${locale}`;
+  return `${SITE_URL}${prefix}${urlPath}`;
+}
+
 export type SolutionFaq = {
   q: string;
   a: string;
@@ -164,6 +186,15 @@ export default function SolutionPage(props: SolutionPageProps): JSX.Element {
     <Layout title={props.metaTitle} description={props.metaDescription}>
       <Head>
         <link rel="canonical" href={canonical} />
+        {HREFLANG_LOCALES.map((l) => (
+          <link
+            key={l}
+            rel="alternate"
+            hrefLang={HREFLANG[l]}
+            href={localizedUrl(l, props.slug)}
+          />
+        ))}
+        <link rel="alternate" hrefLang="x-default" href={localizedUrl('en', props.slug)} />
         <meta name="description" content={props.metaDescription} />
         <meta name="keywords" content={props.keywords} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
