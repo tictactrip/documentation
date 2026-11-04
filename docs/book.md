@@ -533,6 +533,12 @@ Check the full description of this **[request](/api#operation/CreateBook)**.
 As the booking is done asynchronously, you have to call this endpoint to know if the booking was successful or not.  
 If the `orderStatus` is set to `SUCCESS`, then the booking went well.
 
+:::tip
+
+Rather than calling this endpoint until the booking is done, register a **[webhook](/docs/webhooks)**: we call your url with an `order.booked` event once it succeeded.
+
+:::
+
 ```bash
 curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18' \
 --header 'Authorization: Bearer token'
