@@ -504,6 +504,216 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "15. Webhooks",
+      "description": "Register the urls we POST an event on at each change of your carts and orders. See https://developers.tictactrip.eu/docs/webhooks",
+      "item": [
+        {
+          "name": "1. Register a webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer token"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.tictactrip.eu/booking/v3/webhooks",
+              "protocol": "https",
+              "host": [
+                "api",
+                "tictactrip",
+                "eu"
+              ],
+              "path": [
+                "booking",
+                "v3",
+                "webhooks"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"url\": \"https://partner.example/tictactrip/webhook\"\n}"
+            },
+            "description": "A public https url, 5 at most. Copy the returned `webhook.id` into the `webhook_id` variable."
+          },
+          "response": []
+        },
+        {
+          "name": "2. List webhooks",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer token"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.tictactrip.eu/booking/v3/webhooks",
+              "protocol": "https",
+              "host": [
+                "api",
+                "tictactrip",
+                "eu"
+              ],
+              "path": [
+                "booking",
+                "v3",
+                "webhooks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "3. Get a webhook",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer token"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.tictactrip.eu/booking/v3/webhooks/{{webhook_id}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "tictactrip",
+                "eu"
+              ],
+              "path": [
+                "booking",
+                "v3",
+                "webhooks",
+                "{{webhook_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "4. Change the url of a webhook",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer token"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.tictactrip.eu/booking/v3/webhooks/{{webhook_id}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "tictactrip",
+                "eu"
+              ],
+              "path": [
+                "booking",
+                "v3",
+                "webhooks",
+                "{{webhook_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"url\": \"https://partner.example/tictactrip/webhook-v2\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "5. Send test events",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer token"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.tictactrip.eu/booking/v3/webhooks/test",
+              "protocol": "https",
+              "host": [
+                "api",
+                "tictactrip",
+                "eu"
+              ],
+              "path": [
+                "booking",
+                "v3",
+                "webhooks",
+                "test"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"actionType\": \"order.booked\",\n    \"cartId\": \"{{cart_id}}\"\n}"
+            },
+            "description": "Sends events flagged `\"test\": true` to your webhooks. Without `actionType`, one event of each type. Without `cartId`, on the example id `0000000000000000`."
+          },
+          "response": []
+        },
+        {
+          "name": "6. Delete a webhook",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer token"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://api.tictactrip.eu/booking/v3/webhooks/{{webhook_id}}",
+              "protocol": "https",
+              "host": [
+                "api",
+                "tictactrip",
+                "eu"
+              ],
+              "path": [
+                "booking",
+                "v3",
+                "webhooks",
+                "{{webhook_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "event": [
@@ -595,6 +805,10 @@
     {
       "key": "ticket_id",
       "value": "999999"
+    },
+    {
+      "key": "webhook_id",
+      "value": "0b8f6b0e-6a2e-4b8e-9f4b-6c7a0f1b2c3d"
     }
   ]
 }
