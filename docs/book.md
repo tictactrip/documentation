@@ -422,6 +422,87 @@ A price lookup is done everytime a cart is updated.
 }
 ```
 
+### Add options (optional)
+**[`PATCH /booking/v3/carts/{cart_id}`](/api#operation/UpdateCart)**
+
+Each cart response gives the options the customer can buy now in `ancillaryOffers`, with their price. An option that is not in the list is not available for this cart.
+
+| Type | What the customer gets | Covers |
+| --- | --- | --- |
+| `CFAR` | Cancel For Any Reason: the customer cancels a ticket for any reason and gets `refundCents` back (`refundPercent` of the ticket price), whatever the fare. Sold for tickets that leave in more than 72 hours. The customer asks for it until `deadlineUtc` (48 hours before the departure). | One ticket per item |
+| `ZEN_RELAX` | An SMS confirms the trip, and our support handles the requests of the customer first. When `tracksTrains` is true, the SMS also gives the platform, the delay and the cancellation of the train. When `coversDelays` is true, we also ask SNCF for the compensation of a late TGV INOUI or INTERCITÉS train (G30). | The whole order |
+
+Each item of an option is a covered ticket: `segmentId` is the id of its segment in the cart. An item without `segmentId` covers the whole order. `isNonRefundable` is true when the carrier refunds nothing for this ticket.
+
+```json
+{
+  "cart": {
+    "id": "bf58e6091bd04eb2",
+    "paidPrice": 14200,
+    // ...
+    "ancillaryOffers": [
+      {
+        "type": "CFAR",
+        "priceCents": 2414,
+        "items": [
+          {
+            "segmentId": "123",
+            "priceCents": 2414,
+            "deadlineUtc": "2026-12-18T07:30:00.000Z",
+            "refundCents": 12780,
+            "refundPercent": 90
+          }
+        ]
+      },
+      {
+        "type": "ZEN_RELAX",
+        "priceCents": 490,
+        "tracksTrains": true,
+        "coversDelays": true,
+        "items": [{ "priceCents": 490 }]
+      }
+    ],
+    "ancillarySelection": []
+  },
+  "priceCentsDiff": 0,
+  "isAvailable": true
+}
+```
+
+To add options, send their types in `ancillaries`:
+
+```bash
+curl --location --request PATCH 'https://api.tictactrip.eu/booking/v3/carts/bf58e6091bd04eb2' \
+--header 'Authorization: Bearer token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "ancillaries": ["CFAR", "ZEN_RELAX"]
+}'
+```
+
+The list replaces the previous selection. Send `[]` to remove all the options. The API ignores a type that is not in `ancillaryOffers`. The response gives the selected options in `ancillarySelection`.
+
+:::info
+
+The price of the options is not in the cart `paidPrice`. We add it to the `paidPrice` of the order, and we bill it with the order. The order gives the options bought in `ancillaries`, with their `status` (`ACTIVE`, `CLAIMED`, `CANCELLED` or `REFUNDED`).
+
+A cancellation that `CFAR` covers goes through our support. Do not use the [ticket cancellation](/docs/book#ticket-cancellation) endpoint for it.
+
+:::
+
+### Fare flexibility
+
+Each segment of the search, the cart and the order gives the fare conditions in `fareName`, `conditionsName` and `conditions`. The `flexibility` field gives a summary of them:
+
+```json
+"flexibility": {
+  "exchange": "ALLOWED",
+  "refund": "WITH_CONDITIONS"
+}
+```
+
+Each value is `ALLOWED`, `WITH_CONDITIONS` or `NOT_ALLOWED`. The field is absent when the carrier does not give this data. The text in `conditions` is always the reference.
+
 ## 5. Create an order
 **[`POST /booking/v3/orders`](/api#operation/CreateOrder)**
 
