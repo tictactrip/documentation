@@ -659,6 +659,30 @@ A booking can be long, it may be necessary to call this endpoint several times.
 
 :::
 
+### Seats
+
+When the carrier gives the seats at booking (SNCF, OUIGO, Eurostar), the order gives them in `seats`. There is one item per passenger and train:
+
+- `orderTicketId` is the `id` of the segment.
+- `passengerId` is the `id` of the passenger.
+- `coach` and `seat` are the coach number and the seat number.
+- `deck` (`UPPER` or `LOWER`) is the deck of a double-deck train, when the carrier gives it.
+- `trainNumber` is the number of the train, when the ticket has more than one train.
+
+```json
+"seats": [
+  {
+    "orderTicketId": 406308,
+    "passengerId": 349410,
+    "coach": "14",
+    "seat": "62",
+    "deck": "UPPER"
+  }
+]
+```
+
+The field is absent when no carrier of the order gives a seat. The fare conditions of each segment are in `flexibility`, as in the cart: see [Fare flexibility](/docs/book#fare-flexibility).
+
 ## 8. Download tickets
 **[`GET /booking/v3/orders/{order_id/ticket?filename={file_name}`](/api#operation/DownloadTicket)**
 
@@ -677,6 +701,101 @@ curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73
 :::info
 
 If there are several tickets in the order, they will all be in the same pdf.
+
+:::
+
+### Ticket codes
+**[`GET /booking/v3/orders/{order_id}/ticketCodes`](/api#operation/PartnerTicketCodes)**
+
+To show the tickets in your app without the PDF, get the control codes (QR code, Aztec) of the tickets as PNG images:
+
+```bash
+curl --location --request GET 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18/ticketCodes' \
+--header 'Authorization: Bearer token'
+```
+
+```json
+[
+  {
+    "segmentId": "406308",
+    "codes": [
+      {
+        "image": "data:image/png;base64,iVBORw0KGgo...",
+        "format": "QR_CODE",
+        "passengerId": 349410
+      }
+    ]
+  }
+]
+```
+
+- There is one item for each ticket that the customer can still show: booked, not cancelled, and its train has not arrived.
+- `segmentId` is the `id` of the segment. `passengerId` is the `id` of the passenger of the code. It is `null` when the code is for all the passengers, or when the PDF does not tell the passenger.
+- A ticket without a code that we can read is not in the list. The PDF stays the valid ticket.
+
+:::info
+
+The first call after the booking can take some seconds: we read the codes from the PDF. The next calls are fast.
+
+:::
+
+## Add options after the booking
+### Get the options available
+**[`GET /booking/v3/orders/{order_id}/ancillaryOffers`](/api#operation/PartnerAncillaryOffers)**
+
+After the booking, an order can still get the options of the cart (see [Add options](/docs/book#add-options-optional)). This endpoint gives the options available now, with their price:
+
+- `CFAR`: only in the 24 hours after the order.
+- `ZEN_RELAX`: until the departure, and only when we read the live status of the train.
+
+The options apply only to the booked tickets that are not cancelled and have not left. `orderTicketId` is the `id` of the segment that the item covers. It is `null` for an option that covers the whole order. An empty list means that the order cannot get more options.
+
+```json
+[
+  {
+    "type": "CFAR",
+    "priceCents": 2414,
+    "items": [
+      {
+        "orderTicketId": 406308,
+        "priceCents": 2414,
+        "deadlineUtc": "2026-12-18T07:30:00.000Z",
+        "refundCents": 12780,
+        "refundPercent": 90
+      }
+    ]
+  }
+]
+```
+
+### Add the options
+**[`POST /booking/v3/orders/{order_id}/ancillaries`](/api#operation/PartnerAddAncillaries)**
+
+Send the types of the options to add:
+
+```bash
+curl --location --request POST 'https://api.tictactrip.eu/booking/v3/orders/fde73760a5354d18/ancillaries' \
+--header 'Authorization: Bearer token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "types": ["CFAR"]
+}'
+```
+
+```json
+{
+  "purchaseId": "0b6c1f9e-8a4e-4a52-9a3e-2f1d7c5b9e10",
+  "priceCents": 2414
+}
+```
+
+- The price is the price that `ancillaryOffers` gives at the time of the call.
+- The options are active at once. The order gives them in `ancillaries`, with `channel` set to `POST_PURCHASE`.
+- The API ignores a type that is not available. When no type can be added, the API answers `409` with `ancillaries:client:notOffered`.
+
+:::info
+
+There is no payment: we bill the price of the options to you with your orders. We do not send an email to your customer.
 
 :::
 
