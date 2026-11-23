@@ -683,6 +683,32 @@ When the carrier gives the seats at booking (SNCF, OUIGO, Eurostar), the order g
 
 The field is absent when no carrier of the order gives a seat. The fare conditions of each segment are in `flexibility`, as in the cart: see [Fare flexibility](/docs/book#fare-flexibility).
 
+### Train status
+
+Before the departure, the order gives the live status of its trains in `tripStatuses`: cancellation, delay and departure platform. There is one item per segment:
+
+- `orderTicketId` is the `id` of the segment.
+- `isCancelled` is true when the carrier cancelled the train.
+- `delayMinutes` is the delay of the departure from the station of the passenger, in minutes. It is `0` when the train is on time.
+- `departurePlatform` is the departure platform. It is `null` until the station shows it, usually about 20 minutes before the departure.
+- `updatedAt` is the last time we read the status of the train.
+
+```json
+"tripStatuses": [
+  {
+    "orderTicketId": 406308,
+    "isCancelled": false,
+    "delayMinutes": 15,
+    "departurePlatform": "7",
+    "updatedAt": "2026-11-23T08:42:05.000Z"
+  }
+]
+```
+
+We read the status of the SNCF trains only (TGV INOUI, OUIGO, Intercités, TER), from up to 3 hours before the departure, every 5 minutes. We stop to read it 2 hours after the departure time. After that, the order keeps the last status.
+
+The field is absent when no train of the order has a status yet. A segment without an item has no status yet: it does not mean that the train is on time. No webhook event is sent when the status changes: call **[`GET /booking/v3/orders/{order_id}`](/api#operation/GetOrder)** to read it.
+
 ## 8. Download tickets
 **[`GET /booking/v3/orders/{order_id/ticket?filename={file_name}`](/api#operation/DownloadTicket)**
 
